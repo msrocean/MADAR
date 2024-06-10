@@ -6,7 +6,7 @@
 ## Replay-based Continual Learning
 
 <div style="text-align: center;">
-    <img src="repo_imgs/CL_new.pdf" alt="Replay in Continual Learning" />
+    <img src="repo_imgs/MADAR_Replay_CL.png" alt="Replay in Continual Learning" />
 </div>
 
 
