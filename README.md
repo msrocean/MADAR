@@ -6,7 +6,7 @@
 ## Replay-based Continual Learning
 
 <div style="text-align: center;">
-    <img src="repo_imgs/MADAR_Replay_CL.png" alt="Replay in Continual Learning" />
+    <img src="repo_imgs/MADAR_Replay_CL.png" alt="Replay in Continual Learning"  width="300" height="200"/>
 </div>
 
 
@@ -15,7 +15,7 @@
 
 
 <div style="text-align: center;">
-    <img src="repo_imgs/MADAR_IFS.png" alt="Replay in Continual Learning" />
+    <img src="repo_imgs/MADAR_IFS.png" alt="Replay in Continual Learning"  width="300" height="200" />
 </div>
 
 
@@ -23,5 +23,5 @@
 ## Anomalous Weights-based Sampling (AWS)
 
 <div style="text-align: center;">
-    <img src="repo_imgs/MADAR_AWS.png" alt="Replay in Continual Learning" />
+    <img src="repo_imgs/MADAR_AWS.png" alt="Replay in Continual Learning"  width="300" height="200" />
 </div>
