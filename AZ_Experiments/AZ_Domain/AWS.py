@@ -612,14 +612,14 @@ for exp in exp_seeds:
         
         if args.goodware_ifs:
             if ifs_option != 'mix':
-                results_f = open(os.path.join('./Submission_Domain/' + 'aws_good_' + str(ifs_option) + '_' + str(memory_budget) + '_results.txt'), 'a')
+                results_f = open(os.path.join('./Results_Domain/' + 'aws_good_' + str(ifs_option) + '_' + str(memory_budget) + '_results.txt'), 'a')
             else:
-                results_f = open(os.path.join('./Submission_Domain/' + 'aws_good_' + str(ifs_option) + '_' + str(min_samples) + '_' + str(memory_budget) + '_results.txt'), 'a')
+                results_f = open(os.path.join('./Results_Domain/' + 'aws_good_' + str(ifs_option) + '_' + str(min_samples) + '_' + str(memory_budget) + '_results.txt'), 'a')
         else:
             if ifs_option != 'mix':
-                results_f = open(os.path.join('./Submission_Domain/' + 'aws_' + str(ifs_option) + '_' + str(memory_budget) + '_results.txt'), 'a')
+                results_f = open(os.path.join('./Results_Domain/' + 'aws_' + str(ifs_option) + '_' + str(memory_budget) + '_results.txt'), 'a')
             else:
-                results_f = open(os.path.join('./Submission_Domain/' + 'aws_' + str(ifs_option) + '_' + str(min_samples) + '_' + str(memory_budget) + '_results.txt'), 'a')
+                results_f = open(os.path.join('./Results_Domain/' + 'aws_' + str(ifs_option) + '_' + str(min_samples) + '_' + str(memory_budget) + '_results.txt'), 'a')
 
 
         result_string = '{}\t{}\t{}\t{}\t{}\t{}\t\n'.format(current_task, acc, precision, recall, f1score, num_Y_replay)
@@ -633,3 +633,6 @@ for exp in exp_seeds:
     cnt += 1
     print(f'Elapsed time {(end_time - start_time)/60} mins.')
    
+    del model_save_dir
+    del opt_save_path
+    del results_save_dir

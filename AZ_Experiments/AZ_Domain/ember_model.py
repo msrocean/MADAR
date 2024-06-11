@@ -422,25 +422,20 @@ def testing_aucscore(model, X_test, Y_test, batch_size, device):
             y_true_list += list(y_batch.cpu().numpy())
         
             
-    #correct_test_results = (np.array(y_pred_list) == np.array(y_true_list)).sum()
-    #acc = correct_test_results/len(y_true_list)
+    correct_test_results = (np.array(y_pred_list) == np.array(y_true_list)).sum()
+    acc = correct_test_results/len(y_true_list)
     
-#     from sklearn.metrics import f1_score, roc_auc_score, precision_score, recall_score, accuracy_score
+    from sklearn.metrics import f1_score, roc_auc_score, precision_score, recall_score, accuracy_score
     
-#     correct_labels, predicted_labels = np.array(y_true_list), np.array(y_pred_list)
+    correct_labels, predicted_labels = np.array(y_true_list), np.array(y_pred_list)
     
-#     roc_auc = roc_auc_score(correct_labels, predicted_labels)
-#     precision = precision_score(correct_labels, predicted_labels, average='micro')
-#     recall = recall_score(correct_labels, predicted_labels, average='micro')
-#     f1score = f1_score(correct_labels, predicted_labels, average='macro')
+    roc_auc = roc_auc_score(correct_labels, predicted_labels)
+    precision = precision_score(correct_labels, predicted_labels, average='micro')
+    recall = recall_score(correct_labels, predicted_labels, average='micro')
+    f1score = f1_score(correct_labels, predicted_labels, average='macro')
     
-    #print(f'test accuracy {np.mean(test_acc)} and ROC-AUC {roc_auc}')
-
-    #wrong_good, wrong_mal, top_k_mistaken_families = \
-    #            get_mistaken_stats(np.array(y_true_list), np.array(np.round(y_pred_list)), Y_test_family, top_k)
-    
-    #return np.mean(test_acc), roc_auc, precision, recall, f1score
-    return np.mean(test_acc)
+    return np.mean(test_acc), roc_auc, precision, recall, f1score
+    # return np.mean(test_acc)
 
 
 def epoch_training(model, trainloader, batch_size, criterion, optimizer, device):

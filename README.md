@@ -82,6 +82,24 @@ Please note that, these datasets are collected as ``.apk`` files from AndroZoo r
 ### EMBER Domain
 
 1. GRS experiments: run ``python GRS.py --memory_budget=${MEMORY_BUDGET}``
+2. MADAR IFS experiments: run ``python MADAR_IFS.py --ifs_option=${IFS_OPTION} --memory_budget=${MEMORY_BUDGET}``
+3. MADAR AWS experiments: run ``python MADAR_AWS.py --ifs_option=${IFS_OPTION} --memory_budget=${MEMORY_BUDGET}``
+
+### EMBER Class
+
+
+## AZ Experiments
+
+### AZ Domain
+
+1. GRS experiments: run ``python GRS.py --memory_budget=${MEMORY_BUDGET}``
+2. MADAR IFS experiments: run ``python MADAR_IFS.py --ifs_option=${IFS_OPTION} --memory_budget=${MEMORY_BUDGET}``
+3. MADAR AWS experiments: run ``python MADAR_AWS.py --ifs_option=${IFS_OPTION} --memory_budget=${MEMORY_BUDGET}``
+
+### AZ Class
+
+
+
 
 
 

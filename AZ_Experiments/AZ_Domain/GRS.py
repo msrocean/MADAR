@@ -114,7 +114,7 @@ def get_GRS_data(data_dir, task_years, memory_budget, train=True, joint=True, no
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--num_exps', type=int, default=1, required=False, help='Number of Experiments to Run.')
-parser.add_argument('--num_epoch', type=int, default=100, required=False)
+parser.add_argument('--num_epoch', type=int, default=1, required=False)
 parser.add_argument('--batch_size', type=int, default=4096, required=False)
 parser.add_argument('--grs_joint',  action="store_true", required=False)
 parser.add_argument('--grs_none',  action="store_true", required=False)
@@ -246,7 +246,7 @@ for exp in exp_seeds:
         print(f'Elapsed time {(end_time - start_time)/60} mins.')    
         
        
-        results_f = open(os.path.join('./Submission_Domain/' + 'grs_' + str(memory_budget) + '_results.txt'), 'a')
+        results_f = open(os.path.join('./Results_Domain/' + 'grs_' + str(memory_budget) + '_results.txt'), 'a')
         result_string = '{}\t{}\t{}\t{}\t{}\t\n'.format(current_task, acc, precision, recall, f1score)
         
         results_f.write(result_string)
