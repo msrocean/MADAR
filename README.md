@@ -81,10 +81,11 @@ Please note that, these datasets are collected as ``.apk`` files from AndroZoo r
 
 ### EMBER Domain
 
+1. GRS experiments: run ``python GRS.py --memory_budget=${MEMORY_BUDGET}``
 
 
 
-
+__________________________
 #### References
 ```angular2
 [1] Rahman, Mohammad Saidur, Scott Coull, and Matthew Wright. 
