@@ -10,7 +10,7 @@ echo $'----------' ${SCENARIO} $'----------'
 echo $'##### START' ${REPLAY_CONFIG} $'#####'
 
 counter=1
-while [ $counter -le 1 ]
+while [ $counter -le 5 ]
 do
 echo start w/ $counter time 
 python GRS.py --memory_budget=${MEMORY_BUDGET}
