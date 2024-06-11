@@ -20,7 +20,7 @@ Please make sure you have all the dependencies available and installed.
 We suggest the users to create a `python virtual environment` or `conda environment` and install the required packages.
 
 ```
-conda create -n cl_malware python=3.9
+conda create -n MADAR python=3.9
 conda activate MADAR
 conda install numpy=1.25.2
 conda install pytorch=2.0.1 torchvision=0.15.2 cudatoolkit=12.2 -c pytorch
@@ -39,7 +39,17 @@ Alternatively, you can use the exact `conda environment` that we have used for o
 
 ### EMBER
 
+For EMBER experiments, we have used the dataset provided by Rahman et al. [1].
+
 ### AZ
+
+Our collected AZ datasets can be downloaded from ``AZ_Datasets`` directory. The directory contains two datasets.
+
+- `AZ_Domain.tar.bz2` is referred as AZ-Domain for AZ Domain-IL experiments in the paper.
+- `AZ_Family.tar.bz2` is referred as AZ-Class for AZ Class-IL and AZ Task-IL experiments in the paper.
+
+Please note that, these datasets are collected as ``.apk`` files from AndroZoo repository [2]. Then Drebin [3] features are extracted from the ``.apk`` files. Finally the features are standardized using ``standard scaler`` and these final datasets are used to run all the experiments in the paper.
+
 
 
 ## Replay-based Continual Learning
@@ -71,3 +81,16 @@ Alternatively, you can use the exact `conda environment` that we have used for o
 
 ### EMBER Domain
 
+
+
+
+
+#### References
+```angular2
+[1] Rahman, Mohammad Saidur, Scott Coull, and Matthew Wright. "On the limitations of continual learning for malware classification." In Conference on Lifelong Learning Agents, pp. 564-582. PMLR, 2022.
+
+[2] Allix, Kevin, Tegawendé F. Bissyandé, Jacques Klein, and Yves Le Traon. "Androzoo: Collecting millions of android apps for the research community." In Proceedings of the 13th international conference on mining software repositories, pp. 468-471. 2016.
+
+[3] Arp, Daniel, Michael Spreitzenbarth, Malte Hubner, Hugo Gascon, Konrad Rieck, and C. E. R. T. Siemens. "Drebin: Effective and explainable detection of android malware in your pocket." In Ndss, vol. 14, pp. 23-26. 2014.
+
+```

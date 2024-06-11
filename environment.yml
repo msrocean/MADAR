@@ -193,4 +193,3 @@ dependencies:
       - jsonpointer==2.4
       - visdom==0.2.1
       - websocket-client==1.7.0
-prefix: /home/mr6564/anaconda3/envs/PyTorch2
