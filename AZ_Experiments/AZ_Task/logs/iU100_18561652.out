@@ -1,0 +1,3272 @@
+Current date and time 
+##### START task 10000 ifs #####
+Start w/ time
+CUDA is used
+
+Preparing the data...
+ Training data X (257023, 2439) Y (257023,)
+ Test data X (28559, 2439) Y (28559,)
+
+Parameter-stamp...
+ --> task:          AZ_Task20-task
+ --> model:         ember_MLP
+ --> hyper-params:  i10000-lr0.001-b256-sgd
+AZ_Task20-task--ember_MLP--i10000-lr0.001-b256-sgd--
+
+----------------------------------------MAIN MODEL----------------------------------------
+Classifier(
+  (flatten): Flatten()
+  (fcE): AZ_MLP_Net(
+    (fc0): Linear(in_features=2439, out_features=2048, bias=True)
+    (fc0_bn): BatchNorm1d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act0): ReLU()
+    (fc0_drop): Dropout(p=0.5, inplace=False)
+    (fc1): Linear(in_features=2048, out_features=1024, bias=True)
+    (fc1_bn): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act1): ReLU()
+    (fc1_drop): Dropout(p=0.5, inplace=False)
+    (fc2): Linear(in_features=1024, out_features=512, bias=True)
+    (fc2_bn): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act2): ReLU()
+    (fc2_drop): Dropout(p=0.5, inplace=False)
+    (fc3): Linear(in_features=512, out_features=256, bias=True)
+    (fc3_bn): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act3): ReLU()
+    (fc3_drop): Dropout(p=0.5, inplace=False)
+    (fc4): Linear(in_features=256, out_features=128, bias=True)
+    (fc4_bn): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act4): ReLU()
+    (fc4_drop): Dropout(p=0.5, inplace=False)
+  )
+  (classifier): AZ_Classifier(
+    (fc_last): Linear(in_features=128, out_features=100, bias=True)
+  )
+)
+------------------------------------------------------------------------------------------
+--> this network has 7805156 parameters (~7.8 million)
+      of which: - learnable: 7805156 (~7.8 million)
+                - fixed: 0 (~0.0 million)
+------------------------------------------------------------------------------------------
+
+Training...
+task 1 =>> taskLabels [0, 1, 2, 3, 4]
+=> Acc: 0.997 Precision 0.997 Recall 0.997 F1 0.997 
+
+
+accs [0.9973190348525469]
+ precisions [0.9993297587131368]
+ recalls [0.9959785522788204]
+ f1scores [0.999373279030593]
+task 2 =>> taskLabels [5, 6, 7, 8, 9]
+i am Task IFS
+IFS option uniform
+len(X_) 2999 > v_choose 20
+len(X_) 20  v_choose 20
+IFS option uniform
+len(X_) 7178 > v_choose 20
+len(X_) 20  v_choose 20
+IFS option uniform
+len(X_) 285 > v_choose 20
+len(X_) 20  v_choose 20
+IFS option uniform
+len(X_) 1120 > v_choose 20
+len(X_) 20  v_choose 20
+IFS option uniform
+len(X_) 1857 > v_choose 20
+len(X_) 20  v_choose 20
+=> Acc: 0.968 Precision 0.968 Recall 0.968 F1 0.969 
+=> Acc: 0.971 Precision 0.971 Recall 0.971 F1 0.971 
+
+
+accs [0.9684986595174263, 0.9713804713804713]
+ precisions [0.9785522788203753, 0.9848484848484849]
+ recalls [0.9738605898123325, 0.9865319865319865]
+ f1scores [0.9633826313286333, 0.9864590000711188]
+task 3 =>> taskLabels [10, 11, 12, 13, 14]
+i am Task IFS
+IFS option uniform
+len(X_) 2999 > v_choose 10
+len(X_) 10  v_choose 10
+IFS option uniform
+len(X_) 7178 > v_choose 10
+len(X_) 10  v_choose 10
+IFS option uniform
+len(X_) 285 > v_choose 10
+len(X_) 10  v_choose 10
+IFS option uniform
+len(X_) 1120 > v_choose 10
+len(X_) 10  v_choose 10
+IFS option uniform
+len(X_) 1857 > v_choose 10
+len(X_) 10  v_choose 10
+IFS option uniform
+len(X_) 627 > v_choose 10
+len(X_) 10  v_choose 10
+IFS option uniform
+len(X_) 3030 > v_choose 10
+len(X_) 10  v_choose 10
+IFS option uniform
+len(X_) 378 > v_choose 10
+len(X_) 10  v_choose 10
+IFS option uniform
+len(X_) 475 > v_choose 10
+len(X_) 10  v_choose 10
+IFS option uniform
+len(X_) 831 > v_choose 10
+len(X_) 10  v_choose 10
+=> Acc: 0.952 Precision 0.952 Recall 0.952 F1 0.953 
+=> Acc: 0.854 Precision 0.854 Recall 0.854 F1 0.854 
+=> Acc: 0.994 Precision 0.994 Recall 0.994 F1 0.994 
+
+
+accs [0.9517426273458445, 0.8535353535353535, 0.9939965694682675]
+ precisions [0.9477211796246648, 0.8434343434343434, 0.9909948542024014]
+ recalls [0.9524128686327078, 0.867003367003367, 0.9892795883361921]
+ f1scores [0.9490878893905605, 0.8460224716483257, 0.9936391264436105]
+task 4 =>> taskLabels [15, 16, 17, 18, 19]
+i am Task IFS
+IFS option uniform
+len(X_) 2999 > v_choose 7
+len(X_) 8  v_choose 7
+IFS option uniform
+len(X_) 7178 > v_choose 7
+len(X_) 8  v_choose 7
+IFS option uniform
+len(X_) 285 > v_choose 7
+len(X_) 8  v_choose 7
+IFS option uniform
+len(X_) 1120 > v_choose 7
+len(X_) 8  v_choose 7
+IFS option uniform
+len(X_) 1857 > v_choose 7
+len(X_) 8  v_choose 7
+IFS option uniform
+len(X_) 627 > v_choose 7
+len(X_) 8  v_choose 7
+IFS option uniform
+len(X_) 3030 > v_choose 7
+len(X_) 8  v_choose 7
+IFS option uniform
+len(X_) 378 > v_choose 7
+len(X_) 8  v_choose 7
+IFS option uniform
+len(X_) 475 > v_choose 7
+len(X_) 8  v_choose 7
+IFS option uniform
+len(X_) 831 > v_choose 7
+len(X_) 8  v_choose 7
+IFS option uniform
+len(X_) 1562 > v_choose 7
+len(X_) 8  v_choose 7
+IFS option uniform
+len(X_) 484 > v_choose 7
+len(X_) 8  v_choose 7
+IFS option uniform
+len(X_) 8968 > v_choose 7
+len(X_) 8  v_choose 7
+IFS option uniform
+len(X_) 9000 > v_choose 7
+len(X_) 8  v_choose 7
+IFS option uniform
+len(X_) 958 > v_choose 7
+len(X_) 8  v_choose 7
+=> Acc: 0.954 Precision 0.954 Recall 0.954 F1 0.953 
+=> Acc: 0.939 Precision 0.939 Recall 0.939 F1 0.935 
+=> Acc: 0.974 Precision 0.974 Recall 0.974 F1 0.973 
+=> Acc: 0.998 Precision 0.998 Recall 0.998 F1 0.998 
+
+
+accs [0.9544235924932976, 0.9393939393939394, 0.9738421955403087, 0.9983333333333333]
+ precisions [0.9524128686327078, 0.8888888888888888, 0.9704116638078902, 0.9958333333333333]
+ recalls [0.9638069705093834, 0.9107744107744108, 0.9716981132075472, 0.9925]
+ f1scores [0.9555027638492957, 0.9105160169752615, 0.9692893622027082, 0.9939730273213015]
+task 5 =>> taskLabels [20, 21, 22, 23, 24]
+i am Task IFS
+IFS option uniform
+len(X_) 2999 > v_choose 5
+len(X_) 6  v_choose 5
+IFS option uniform
+len(X_) 7178 > v_choose 5
+len(X_) 6  v_choose 5
+IFS option uniform
+len(X_) 285 > v_choose 5
+len(X_) 6  v_choose 5
+IFS option uniform
+len(X_) 1120 > v_choose 5
+len(X_) 6  v_choose 5
+IFS option uniform
+len(X_) 1857 > v_choose 5
+len(X_) 6  v_choose 5
+IFS option uniform
+len(X_) 627 > v_choose 5
+len(X_) 6  v_choose 5
+IFS option uniform
+len(X_) 3030 > v_choose 5
+len(X_) 6  v_choose 5
+IFS option uniform
+len(X_) 378 > v_choose 5
+len(X_) 6  v_choose 5
+IFS option uniform
+len(X_) 475 > v_choose 5
+len(X_) 6  v_choose 5
+IFS option uniform
+len(X_) 831 > v_choose 5
+len(X_) 6  v_choose 5
+IFS option uniform
+len(X_) 1562 > v_choose 5
+len(X_) 6  v_choose 5
+IFS option uniform
+len(X_) 484 > v_choose 5
+len(X_) 6  v_choose 5
+IFS option uniform
+len(X_) 8968 > v_choose 5
+len(X_) 6  v_choose 5
+IFS option uniform
+len(X_) 9000 > v_choose 5
+len(X_) 6  v_choose 5
+IFS option uniform
+len(X_) 958 > v_choose 5
+len(X_) 6  v_choose 5
+IFS option uniform
+len(X_) 411 > v_choose 5
+len(X_) 6  v_choose 5
+IFS option uniform
+len(X_) 190 > v_choose 5
+len(X_) 6  v_choose 5
+IFS option uniform
+len(X_) 382 > v_choose 5
+len(X_) 6  v_choose 5
+IFS option uniform
+len(X_) 8998 > v_choose 5
+len(X_) 6  v_choose 5
+IFS option uniform
+len(X_) 816 > v_choose 5
+len(X_) 6  v_choose 5
+=> Acc: 0.932 Precision 0.932 Recall 0.932 F1 0.930 
+=> Acc: 0.894 Precision 0.894 Recall 0.894 F1 0.881 
+=> Acc: 0.802 Precision 0.802 Recall 0.802 F1 0.788 
+=> Acc: 0.954 Precision 0.954 Recall 0.954 F1 0.954 
+=> Acc: 0.976 Precision 0.976 Recall 0.976 F1 0.976 
+
+
+accs [0.9323056300268097, 0.8939393939393939, 0.8018867924528302, 0.9541666666666667, 0.976457399103139]
+ precisions [0.9262734584450402, 0.8754208754208754, 0.8246140651801029, 0.9541666666666667, 0.9815022421524664]
+ recalls [0.9242627345844504, 0.8787878787878788, 0.8156089193825042, 0.9516666666666667, 0.9792600896860987]
+ f1scores [0.93951533322168, 0.8617582021176279, 0.7899702767978067, 0.9553841002559587, 0.9779197202425749]
+task 6 =>> taskLabels [25, 26, 27, 28, 29]
+i am Task IFS
+IFS option uniform
+len(X_) 2999 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 7178 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 285 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 1120 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 1857 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 627 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 3030 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 378 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 475 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 831 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 1562 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 484 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 8968 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 9000 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 958 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 411 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 190 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 382 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 8998 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 816 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 759 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 1758 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 8997 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 228 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 4324 > v_choose 4
+len(X_) 4  v_choose 4
+=> Acc: 0.761 Precision 0.761 Recall 0.761 F1 0.741 
+=> Acc: 0.739 Precision 0.739 Recall 0.739 F1 0.741 
+=> Acc: 0.917 Precision 0.917 Recall 0.917 F1 0.915 
+=> Acc: 0.842 Precision 0.842 Recall 0.842 F1 0.841 
+=> Acc: 0.881 Precision 0.881 Recall 0.881 F1 0.879 
+=> Acc: 0.962 Precision 0.962 Recall 0.962 F1 0.962 
+
+
+accs [0.7607238605898123, 0.7390572390572391, 0.9168096054888508, 0.8416666666666667, 0.8811659192825112, 0.9617169373549884]
+ precisions [0.7627345844504021, 0.7643097643097643, 0.9095197255574614, 0.8308333333333333, 0.8845291479820628, 0.951276102088167]
+ recalls [0.7714477211796247, 0.7508417508417509, 0.9228130360205832, 0.8541666666666666, 0.8867713004484304, 0.9535962877030162]
+ f1scores [0.7405813471144276, 0.7413498881570815, 0.9274062849731062, 0.838148197564003, 0.886257507749926, 0.9610886082981864]
+task 7 =>> taskLabels [30, 31, 32, 33, 34]
+i am Task IFS
+IFS option uniform
+len(X_) 2999 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 7178 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 285 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 1120 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 1857 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 627 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 3030 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 378 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 475 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 831 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 1562 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 484 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 8968 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 9000 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 958 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 411 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 190 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 382 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 8998 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 816 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 759 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 1758 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 8997 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 228 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 4324 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 494 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 442 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 3881 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 8993 > v_choose 4
+len(X_) 4  v_choose 4
+IFS option uniform
+len(X_) 1707 > v_choose 4
+len(X_) 4  v_choose 4
+=> Acc: 0.887 Precision 0.887 Recall 0.887 F1 0.888 
+=> Acc: 0.859 Precision 0.859 Recall 0.859 F1 0.839 
+=> Acc: 0.926 Precision 0.926 Recall 0.926 F1 0.925 
+=> Acc: 0.828 Precision 0.828 Recall 0.828 F1 0.818 
+=> Acc: 0.890 Precision 0.890 Recall 0.890 F1 0.889 
+=> Acc: 0.848 Precision 0.848 Recall 0.848 F1 0.847 
+=> Acc: 0.968 Precision 0.968 Recall 0.968 F1 0.969 
+
+
+accs [0.8867292225201072, 0.8585858585858586, 0.9258147512864494, 0.8283333333333334, 0.8895739910313901, 0.8480278422273781, 0.9684772065955383]
+ precisions [0.903485254691689, 0.8417508417508418, 0.9283876500857633, 0.8175, 0.8778026905829597, 0.8381670533642691, 0.967992240543162]
+ recalls [0.896112600536193, 0.8383838383838383, 0.9245283018867925, 0.8241666666666667, 0.8834080717488789, 0.8631090487238979, 0.9709020368574199]
+ f1scores [0.8997710044181492, 0.7995947704435745, 0.9222280673911749, 0.7990283250491418, 0.8839439038975041, 0.8559447909482321, 0.9698433802684303]
+task 8 =>> taskLabels [35, 36, 37, 38, 39]
+i am Task IFS
+IFS option uniform
+len(X_) 2999 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 7178 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 285 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 1120 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 1857 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 627 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 3030 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 378 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 475 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 831 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 1562 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 484 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8968 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 9000 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 958 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 411 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 190 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 382 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8998 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 816 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 759 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 1758 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8997 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 228 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 4324 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 494 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 442 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 3881 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8993 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 1707 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 5743 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 2621 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8984 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 1036 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 184 > v_choose 3
+len(X_) 4  v_choose 3
+=> Acc: 0.806 Precision 0.806 Recall 0.806 F1 0.806 
+=> Acc: 0.828 Precision 0.828 Recall 0.828 F1 0.840 
+=> Acc: 0.741 Precision 0.741 Recall 0.741 F1 0.725 
+=> Acc: 0.813 Precision 0.813 Recall 0.813 F1 0.806 
+=> Acc: 0.778 Precision 0.778 Recall 0.778 F1 0.776 
+=> Acc: 0.869 Precision 0.869 Recall 0.869 F1 0.869 
+=> Acc: 0.933 Precision 0.933 Recall 0.933 F1 0.932 
+=> Acc: 0.921 Precision 0.921 Recall 0.921 F1 0.918 
+
+
+accs [0.8063002680965148, 0.8282828282828283, 0.7405660377358491, 0.8133333333333334, 0.7780269058295964, 0.8689095127610209, 0.9325897187196897, 0.9206762028608583]
+ precisions [0.8022788203753352, 0.8434343434343434, 0.7354202401372213, 0.8016666666666666, 0.7920403587443946, 0.851508120649652, 0.9277400581959263, 0.9187256176853056]
+ recalls [0.796916890080429, 0.8737373737373737, 0.7315608919382505, 0.8241666666666667, 0.7819506726457399, 0.857308584686775, 0.9291949563530553, 0.9216514954486346]
+ f1scores [0.7995052668484759, 0.835843485301415, 0.7221703970494745, 0.8132212217394107, 0.7860143978891566, 0.8553195252254445, 0.9299201297507844, 0.9081985369787857]
+task 9 =>> taskLabels [40, 41, 42, 43, 44]
+i am Task IFS
+IFS option uniform
+len(X_) 2999 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 7178 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 285 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 1120 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 1857 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 627 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 3030 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 378 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 475 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 831 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 1562 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 484 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8968 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 9000 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 958 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 411 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 190 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 382 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8998 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 816 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 759 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 1758 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8997 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 228 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 4324 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 494 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 442 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 3881 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8993 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 1707 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 5743 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 2621 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8984 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 1036 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 184 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8951 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8994 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 346 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8988 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 400 > v_choose 3
+len(X_) 4  v_choose 3
+=> Acc: 0.755 Precision 0.755 Recall 0.755 F1 0.732 
+=> Acc: 0.751 Precision 0.751 Recall 0.751 F1 0.743 
+=> Acc: 0.858 Precision 0.858 Recall 0.858 F1 0.858 
+=> Acc: 0.762 Precision 0.762 Recall 0.762 F1 0.760 
+=> Acc: 0.820 Precision 0.820 Recall 0.820 F1 0.822 
+=> Acc: 0.814 Precision 0.814 Recall 0.814 F1 0.808 
+=> Acc: 0.883 Precision 0.883 Recall 0.883 F1 0.880 
+=> Acc: 0.840 Precision 0.840 Recall 0.840 F1 0.827 
+=> Acc: 0.993 Precision 0.993 Recall 0.993 F1 0.993 
+
+
+accs [0.7553619302949062, 0.7508417508417509, 0.8584905660377359, 0.7616666666666667, 0.820067264573991, 0.814385150812065, 0.8826382153249273, 0.8397269180754227, 0.9932716568544996]
+ precisions [0.7379356568364611, 0.7676767676767676, 0.8563464837049742, 0.7408333333333333, 0.7959641255605381, 0.8016241299303944, 0.8870029097963142, 0.8371261378413524, 0.9873843566021867]
+ recalls [0.7526809651474531, 0.7895622895622896, 0.8460548885077187, 0.765, 0.8251121076233184, 0.8138051044083526, 0.887972841901067, 0.8455786736020806, 0.9949537426408747]
+ f1scores [0.7160533669868115, 0.7414707290735135, 0.8503800966676593, 0.7773666945082429, 0.8124789090294673, 0.8151883155095344, 0.8771050763133642, 0.829395436096239, 0.9903163312790365]
+task 10 =>> taskLabels [45, 46, 47, 48, 49]
+i am Task IFS
+IFS option uniform
+len(X_) 2999 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 7178 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 285 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 1120 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 1857 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 627 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 3030 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 378 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 475 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 831 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 1562 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 484 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8968 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 9000 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 958 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 411 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 190 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 382 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8998 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 816 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 759 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 1758 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8997 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 228 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 4324 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 494 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 442 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 3881 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8993 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 1707 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 5743 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 2621 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8984 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 1036 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 184 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8951 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8994 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 346 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8988 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 400 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 729 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 256 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 475 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 8988 > v_choose 3
+len(X_) 4  v_choose 3
+IFS option uniform
+len(X_) 240 > v_choose 3
+len(X_) 4  v_choose 3
+=> Acc: 0.865 Precision 0.865 Recall 0.865 F1 0.864 
+=> Acc: 0.742 Precision 0.742 Recall 0.742 F1 0.722 
+=> Acc: 0.784 Precision 0.784 Recall 0.784 F1 0.794 
+=> Acc: 0.782 Precision 0.782 Recall 0.782 F1 0.775 
+=> Acc: 0.834 Precision 0.834 Recall 0.834 F1 0.827 
+=> Acc: 0.817 Precision 0.817 Recall 0.817 F1 0.820 
+=> Acc: 0.875 Precision 0.875 Recall 0.875 F1 0.874 
+=> Acc: 0.816 Precision 0.816 Recall 0.816 F1 0.806 
+=> Acc: 0.934 Precision 0.934 Recall 0.934 F1 0.933 
+=> Acc: 0.975 Precision 0.975 Recall 0.975 F1 0.976 
+
+
+accs [0.8652815013404825, 0.7424242424242424, 0.7843053173241853, 0.7825, 0.8340807174887892, 0.8167053364269141, 0.8753637245392822, 0.8163198959687906, 0.9343986543313709, 0.9746192893401016]
+ precisions [0.8739946380697051, 0.7121212121212122, 0.8014579759862779, 0.7858333333333334, 0.8228699551569507, 0.8149651972157773, 0.887972841901067, 0.7971391417425228, 0.9352396972245585, 0.9441624365482234]
+ recalls [0.871313672922252, 0.7306397306397306, 0.8130360205831904, 0.7658333333333334, 0.8189461883408071, 0.8109048723897911, 0.8729388942774006, 0.8198959687906372, 0.9234650967199327, 0.9593908629441624]
+ f1scores [0.8608088554698814, 0.7338798294755988, 0.804162636625874, 0.7822127928352391, 0.8150092343886615, 0.8231239733885731, 0.8854005625690562, 0.8037060622663457, 0.9295208609770655, 0.939309462915601]
+task 11 =>> taskLabels [50, 51, 52, 53, 54]
+i am Task IFS
+IFS option uniform
+len(X_) 2999 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 7178 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 285 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1120 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1857 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 627 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3030 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 378 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 475 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 831 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1562 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 484 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8968 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 9000 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 958 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 411 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 190 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 382 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8998 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 816 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 759 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1758 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8997 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 228 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 4324 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 494 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 442 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3881 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8993 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1707 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 5743 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 2621 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8984 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1036 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 184 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8951 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8994 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 346 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8988 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 400 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 729 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 256 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 475 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8988 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 240 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 445 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 204 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 451 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 281 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 393 > v_choose 2
+len(X_) 2  v_choose 2
+=> Acc: 0.916 Precision 0.916 Recall 0.916 F1 0.912 
+=> Acc: 0.870 Precision 0.870 Recall 0.870 F1 0.851 
+=> Acc: 0.818 Precision 0.818 Recall 0.818 F1 0.825 
+=> Acc: 0.722 Precision 0.722 Recall 0.722 F1 0.710 
+=> Acc: 0.841 Precision 0.841 Recall 0.841 F1 0.839 
+=> Acc: 0.794 Precision 0.794 Recall 0.794 F1 0.795 
+=> Acc: 0.797 Precision 0.797 Recall 0.797 F1 0.793 
+=> Acc: 0.795 Precision 0.795 Recall 0.795 F1 0.769 
+=> Acc: 0.891 Precision 0.891 Recall 0.891 F1 0.888 
+=> Acc: 0.975 Precision 0.975 Recall 0.975 F1 0.974 
+=> Acc: 0.962 Precision 0.962 Recall 0.962 F1 0.962 
+
+
+accs [0.9155495978552279, 0.8703703703703703, 0.8177530017152659, 0.7216666666666667, 0.8408071748878924, 0.7940835266821346, 0.7967992240543162, 0.7951885565669701, 0.8906644238856182, 0.9746192893401016, 0.9617404351087772]
+ precisions [0.9142091152815014, 0.8720538720538721, 0.8096054888507719, 0.7108333333333333, 0.8352017937219731, 0.7882830626450116, 0.7958292919495635, 0.7815344603381015, 0.8898233809924306, 0.9644670050761421, 0.9587396849212303]
+ recalls [0.9081769436997319, 0.8737373737373737, 0.8126072041166381, 0.7258333333333333, 0.8402466367713004, 0.7935034802784223, 0.7754607177497576, 0.7805591677503251, 0.8788898233809924, 0.9289340101522843, 0.9707426856714179]
+ f1scores [0.9185788269151931, 0.8485383289014521, 0.8128243277343895, 0.7119864553336412, 0.8467878657977497, 0.7960971826380231, 0.7852304465802359, 0.7644381460646665, 0.8763436375386796, 0.9687736036256505, 0.962692946754134]
+task 12 =>> taskLabels [55, 56, 57, 58, 59]
+i am Task IFS
+IFS option uniform
+len(X_) 2999 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 7178 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 285 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1120 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1857 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 627 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3030 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 378 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 475 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 831 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1562 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 484 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8968 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 9000 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 958 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 411 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 190 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 382 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8998 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 816 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 759 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1758 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8997 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 228 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 4324 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 494 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 442 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3881 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8993 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1707 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 5743 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 2621 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8984 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1036 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 184 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8951 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8994 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 346 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8988 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 400 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 729 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 256 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 475 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8988 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 240 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 445 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 204 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 451 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 281 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 393 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1516 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8968 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 522 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 216 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 785 > v_choose 2
+len(X_) 2  v_choose 2
+=> Acc: 0.910 Precision 0.910 Recall 0.910 F1 0.909 
+=> Acc: 0.848 Precision 0.848 Recall 0.848 F1 0.844 
+=> Acc: 0.766 Precision 0.766 Recall 0.766 F1 0.755 
+=> Acc: 0.677 Precision 0.677 Recall 0.677 F1 0.657 
+=> Acc: 0.849 Precision 0.849 Recall 0.849 F1 0.845 
+=> Acc: 0.716 Precision 0.716 Recall 0.716 F1 0.712 
+=> Acc: 0.879 Precision 0.879 Recall 0.879 F1 0.879 
+=> Acc: 0.733 Precision 0.733 Recall 0.733 F1 0.708 
+=> Acc: 0.904 Precision 0.904 Recall 0.904 F1 0.901 
+=> Acc: 0.990 Precision 0.990 Recall 0.990 F1 0.989 
+=> Acc: 0.904 Precision 0.904 Recall 0.904 F1 0.907 
+=> Acc: 0.979 Precision 0.979 Recall 0.979 F1 0.978 
+
+
+accs [0.9095174262734584, 0.8484848484848485, 0.766295025728988, 0.6766666666666666, 0.8486547085201793, 0.7157772621809745, 0.8792434529582929, 0.7327698309492848, 0.904121110176619, 0.9898477157360406, 0.9039759939984996, 0.978585086042065]
+ precisions [0.9121983914209115, 0.8552188552188552, 0.7525728987993139, 0.6875, 0.8570627802690582, 0.7204176334106729, 0.8773035887487876, 0.7298439531859557, 0.8822539949537427, 0.9746192893401016, 0.9204801200300075, 0.9789674952198852]
+ recalls [0.9095174262734584, 0.8468013468013468, 0.7637221269296741, 0.6741666666666667, 0.8419282511210763, 0.718677494199536, 0.8734238603297769, 0.7288686605981795, 0.8999158957106812, 0.9695431472081218, 0.9174793698424606, 0.9808795411089866]
+ f1scores [0.9142429055964472, 0.8511920538935108, 0.7516465331176434, 0.6629768435350697, 0.8476961486960539, 0.7023830662580989, 0.8822240218138694, 0.6940573769599914, 0.8907947350893413, 0.9840780948442239, 0.9051632485393764, 0.9808512502361367]
+task 13 =>> taskLabels [60, 61, 62, 63, 64]
+i am Task IFS
+IFS option uniform
+len(X_) 2999 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 7178 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 285 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1120 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1857 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 627 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3030 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 378 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 475 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 831 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1562 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 484 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8968 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 9000 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 958 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 411 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 190 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 382 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8998 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 816 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 759 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1758 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8997 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 228 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 4324 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 494 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 442 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3881 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8993 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1707 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 5743 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 2621 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8984 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1036 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 184 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8951 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8994 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 346 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8988 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 400 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 729 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 256 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 475 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8988 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 240 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 445 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 204 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 451 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 281 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 393 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1516 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8968 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 522 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 216 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 785 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1395 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 6704 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 5933 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8996 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 509 > v_choose 2
+len(X_) 2  v_choose 2
+=> Acc: 0.895 Precision 0.895 Recall 0.895 F1 0.894 
+=> Acc: 0.875 Precision 0.875 Recall 0.875 F1 0.860 
+=> Acc: 0.795 Precision 0.795 Recall 0.795 F1 0.802 
+=> Acc: 0.709 Precision 0.709 Recall 0.709 F1 0.698 
+=> Acc: 0.860 Precision 0.860 Recall 0.860 F1 0.858 
+=> Acc: 0.753 Precision 0.753 Recall 0.753 F1 0.752 
+=> Acc: 0.845 Precision 0.845 Recall 0.845 F1 0.845 
+=> Acc: 0.741 Precision 0.741 Recall 0.741 F1 0.718 
+=> Acc: 0.859 Precision 0.859 Recall 0.859 F1 0.851 
+=> Acc: 0.964 Precision 0.964 Recall 0.964 F1 0.963 
+=> Acc: 0.885 Precision 0.885 Recall 0.885 F1 0.885 
+=> Acc: 0.966 Precision 0.966 Recall 0.966 F1 0.967 
+=> Acc: 0.879 Precision 0.879 Recall 0.879 F1 0.868 
+
+
+accs [0.8954423592493298, 0.8754208754208754, 0.7950257289879932, 0.7091666666666666, 0.8604260089686099, 0.7529002320185615, 0.8448108632395732, 0.7405721716514955, 0.8587047939444912, 0.9644670050761421, 0.8852213053263316, 0.9663479923518165, 0.8789144050104384]
+ precisions [0.9014745308310992, 0.8400673400673401, 0.8014579759862779, 0.7383333333333333, 0.8649103139013453, 0.7517401392111369, 0.8491755577109602, 0.7421976592977894, 0.847771236333053, 0.9187817258883249, 0.8882220555138785, 0.9621414913957935, 0.8893528183716075]
+ recalls [0.9088471849865952, 0.8383838383838383, 0.7950257289879932, 0.7275, 0.8576233183856502, 0.7534802784222738, 0.8486905916585838, 0.7434980494148244, 0.8612279226240538, 0.934010152284264, 0.8979744936234059, 0.9678776290630975, 0.8653444676409185]
+ f1scores [0.909113200080291, 0.8562725528358998, 0.7965285791963377, 0.7093969595122774, 0.8643126334918467, 0.7720015891227962, 0.8555225805136057, 0.7323563096770368, 0.8633588432015692, 0.9639721263560957, 0.8713541980889076, 0.9652799012866037, 0.8803700123579816]
+task 14 =>> taskLabels [65, 66, 67, 68, 69]
+i am Task IFS
+IFS option uniform
+len(X_) 2999 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 7178 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 285 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1120 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1857 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 627 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3030 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 378 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 475 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 831 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1562 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 484 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8968 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 9000 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 958 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 411 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 190 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 382 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8998 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 816 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 759 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1758 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8997 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 228 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 4324 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 494 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 442 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3881 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8993 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1707 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 5743 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 2621 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8984 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1036 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 184 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8951 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8994 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 346 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8988 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 400 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 729 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 256 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 475 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8988 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 240 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 445 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 204 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 451 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 281 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 393 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1516 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8968 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 522 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 216 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 785 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1395 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 6704 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 5933 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8996 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 509 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 888 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 595 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 6061 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 851 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 228 > v_choose 2
+len(X_) 2  v_choose 2
+=> Acc: 0.895 Precision 0.895 Recall 0.895 F1 0.892 
+=> Acc: 0.835 Precision 0.835 Recall 0.835 F1 0.814 
+=> Acc: 0.750 Precision 0.750 Recall 0.750 F1 0.741 
+=> Acc: 0.733 Precision 0.733 Recall 0.733 F1 0.734 
+=> Acc: 0.832 Precision 0.832 Recall 0.832 F1 0.826 
+=> Acc: 0.750 Precision 0.750 Recall 0.750 F1 0.755 
+=> Acc: 0.880 Precision 0.880 Recall 0.880 F1 0.880 
+=> Acc: 0.749 Precision 0.749 Recall 0.749 F1 0.726 
+=> Acc: 0.862 Precision 0.862 Recall 0.862 F1 0.867 
+=> Acc: 0.954 Precision 0.954 Recall 0.954 F1 0.953 
+=> Acc: 0.884 Precision 0.884 Recall 0.884 F1 0.884 
+=> Acc: 0.959 Precision 0.959 Recall 0.959 F1 0.959 
+=> Acc: 0.865 Precision 0.865 Recall 0.865 F1 0.834 
+=> Acc: 0.940 Precision 0.940 Recall 0.940 F1 0.940 
+
+
+accs [0.8947721179624665, 0.835016835016835, 0.7504288164665524, 0.7333333333333333, 0.8323991031390134, 0.75, 0.8797284190106692, 0.7486996098829649, 0.8620689655172413, 0.9543147208121827, 0.8837209302325582, 0.9586998087954111, 0.8653444676409185, 0.9404666130329847]
+ precisions [0.9041554959785523, 0.8282828282828283, 0.7139794168096055, 0.7483333333333333, 0.8301569506726457, 0.7610208816705336, 0.8671193016488846, 0.7321196358907672, 0.8486122792262405, 0.9796954314720813, 0.8972243060765192, 0.9640535372848948, 0.8611691022964509, 0.9275945293644409]
+ recalls [0.9068364611260054, 0.8400673400673401, 0.7341337907375644, 0.725, 0.8301569506726457, 0.7691415313225058, 0.8724539282250242, 0.7428478543563068, 0.8637510513036165, 0.9593908629441624, 0.8829707426856714, 0.9590822179732313, 0.8622129436325678, 0.9300080450522928]
+ f1scores [0.9030488860764694, 0.8195927570200183, 0.7168979544223604, 0.7436079999839452, 0.8287597658846094, 0.7694297617610928, 0.8859988303909784, 0.715180546715373, 0.8642842387490035, 0.9809290520354349, 0.8919766589691713, 0.9640278482143568, 0.8213563039147751, 0.9352312133420533]
+task 15 =>> taskLabels [70, 71, 72, 73, 74]
+i am Task IFS
+IFS option uniform
+len(X_) 2999 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 7178 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 285 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1120 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1857 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 627 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3030 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 378 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 475 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 831 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1562 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 484 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8968 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 9000 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 958 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 411 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 190 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 382 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8998 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 816 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 759 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1758 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8997 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 228 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 4324 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 494 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 442 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3881 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8993 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1707 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 5743 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 2621 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8984 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1036 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 184 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8951 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8994 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 346 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8988 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 400 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 729 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 256 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 475 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8988 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 240 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 445 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 204 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 451 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 281 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 393 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1516 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8968 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 522 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 216 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 785 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1395 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 6704 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 5933 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8996 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 509 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 888 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 595 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 6061 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 851 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 228 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8992 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1322 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 385 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 247 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 242 > v_choose 2
+len(X_) 2  v_choose 2
+=> Acc: 0.872 Precision 0.872 Recall 0.872 F1 0.872 
+=> Acc: 0.850 Precision 0.850 Recall 0.850 F1 0.815 
+=> Acc: 0.852 Precision 0.852 Recall 0.852 F1 0.856 
+=> Acc: 0.697 Precision 0.697 Recall 0.697 F1 0.689 
+=> Acc: 0.817 Precision 0.817 Recall 0.817 F1 0.815 
+=> Acc: 0.751 Precision 0.751 Recall 0.751 F1 0.752 
+=> Acc: 0.888 Precision 0.888 Recall 0.888 F1 0.887 
+=> Acc: 0.720 Precision 0.720 Recall 0.720 F1 0.694 
+=> Acc: 0.800 Precision 0.800 Recall 0.800 F1 0.798 
+=> Acc: 0.970 Precision 0.970 Recall 0.970 F1 0.970 
+=> Acc: 0.827 Precision 0.827 Recall 0.827 F1 0.827 
+=> Acc: 0.951 Precision 0.951 Recall 0.951 F1 0.950 
+=> Acc: 0.837 Precision 0.837 Recall 0.837 F1 0.795 
+=> Acc: 0.850 Precision 0.850 Recall 0.850 F1 0.844 
+=> Acc: 0.964 Precision 0.964 Recall 0.964 F1 0.963 
+
+
+accs [0.8719839142091153, 0.8501683501683501, 0.8520583190394511, 0.6966666666666667, 0.8167040358744395, 0.7505800464037123, 0.887972841901067, 0.7204161248374512, 0.7998317914213625, 0.9695431472081218, 0.8267066766691673, 0.9506692160611855, 0.837160751565762, 0.8495575221238938, 0.964]
+ precisions [0.863941018766756, 0.8400673400673401, 0.8584905660377359, 0.6841666666666667, 0.820627802690583, 0.7726218097447796, 0.8957322987390882, 0.738296488946684, 0.8376787216148024, 0.9695431472081218, 0.846211552888222, 0.9422562141491396, 0.8162839248434238, 0.82864038616251, 0.968]
+ recalls [0.8666219839142091, 0.8468013468013468, 0.8649228130360206, 0.6741666666666667, 0.820627802690583, 0.7505800464037123, 0.8903976721629486, 0.738296488946684, 0.8301093355761143, 0.9543147208121827, 0.8154538634658665, 0.9514340344168261, 0.848643006263048, 0.8543845534995977, 0.9586666666666667]
+ f1scores [0.8615836316549217, 0.8385221160193563, 0.8608675491753548, 0.6963584359147247, 0.8068739727796587, 0.7711598740491252, 0.9009628851108843, 0.7115531453041053, 0.8206929330012915, 0.9460461374115994, 0.8467603249113287, 0.9482109488683952, 0.7850543782027024, 0.8259229474425027, 0.967613564955581]
+task 16 =>> taskLabels [75, 76, 77, 78, 79]
+i am Task IFS
+IFS option uniform
+len(X_) 2999 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 7178 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 285 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1120 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1857 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 627 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3030 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 378 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 475 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 831 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1562 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 484 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8968 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 9000 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 958 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 411 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 190 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 382 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8998 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 816 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 759 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1758 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8997 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 228 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 4324 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 494 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 442 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3881 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8993 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1707 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 5743 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 2621 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8984 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1036 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 184 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8951 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8994 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 346 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8988 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 400 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 729 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 256 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 475 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8988 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 240 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 445 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 204 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 451 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 281 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 393 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1516 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8968 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 522 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 216 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 785 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1395 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 6704 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 5933 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8996 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 509 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 888 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 595 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 6061 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 851 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 228 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8992 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1322 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 385 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 247 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 242 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 292 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 788 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 4595 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 875 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 188 > v_choose 2
+len(X_) 2  v_choose 2
+=> Acc: 0.897 Precision 0.897 Recall 0.897 F1 0.897 
+=> Acc: 0.848 Precision 0.848 Recall 0.848 F1 0.848 
+=> Acc: 0.908 Precision 0.908 Recall 0.908 F1 0.907 
+=> Acc: 0.654 Precision 0.654 Recall 0.654 F1 0.632 
+=> Acc: 0.777 Precision 0.777 Recall 0.777 F1 0.766 
+=> Acc: 0.691 Precision 0.691 Recall 0.691 F1 0.676 
+=> Acc: 0.834 Precision 0.834 Recall 0.834 F1 0.835 
+=> Acc: 0.760 Precision 0.760 Recall 0.760 F1 0.729 
+=> Acc: 0.829 Precision 0.829 Recall 0.829 F1 0.824 
+=> Acc: 0.949 Precision 0.949 Recall 0.949 F1 0.949 
+=> Acc: 0.861 Precision 0.861 Recall 0.861 F1 0.859 
+=> Acc: 0.944 Precision 0.944 Recall 0.944 F1 0.945 
+=> Acc: 0.842 Precision 0.842 Recall 0.842 F1 0.798 
+=> Acc: 0.866 Precision 0.866 Recall 0.866 F1 0.854 
+=> Acc: 0.951 Precision 0.951 Recall 0.951 F1 0.950 
+=> Acc: 0.908 Precision 0.908 Recall 0.908 F1 0.908 
+
+
+accs [0.8967828418230563, 0.8484848484848485, 0.9078044596912521, 0.6541666666666667, 0.7769058295964125, 0.6908352668213457, 0.8341416100872939, 0.7597529258777633, 0.8292682926829268, 0.949238578680203, 0.8612153038259565, 0.944168260038241, 0.8423799582463466, 0.8656476267095736, 0.9506666666666667, 0.9083785412899337]
+ precisions [0.881367292225201, 0.8484848484848485, 0.9052315608919382, 0.6625, 0.7724215246636771, 0.6937354988399071, 0.8433559650824443, 0.7743823146944083, 0.8242220353238016, 0.9390862944162437, 0.8664666166541636, 0.9445506692160612, 0.8475991649269311, 0.8688656476267096, 0.9493333333333334, 0.9234478601567209]
+ recalls [0.8914209115281502, 0.8569023569023569, 0.8880789022298456, 0.6333333333333333, 0.7825112107623319, 0.70707656612529, 0.8336566440349176, 0.7864109232769831, 0.8242220353238016, 0.9695431472081218, 0.8559639909977494, 0.9426386233269598, 0.8235908141962421, 0.8487530168946098, 0.9666666666666667, 0.9041591320072333]
+ f1scores [0.8878323574981719, 0.8357453123485573, 0.9157775807282116, 0.6189471060407743, 0.759689883216818, 0.6681276157530849, 0.8462346005441962, 0.739006059887846, 0.8321949493569969, 0.928460445146003, 0.8563198503277528, 0.9474860769737707, 0.7821922692717471, 0.8417319115488759, 0.9527993922343054, 0.9190242357697752]
+task 17 =>> taskLabels [80, 81, 82, 83, 84]
+i am Task IFS
+IFS option uniform
+len(X_) 2999 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 7178 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 285 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1120 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1857 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 627 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3030 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 378 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 475 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 831 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1562 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 484 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8968 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 9000 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 958 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 411 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 190 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 382 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8998 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 816 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 759 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1758 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8997 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 228 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 4324 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 494 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 442 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3881 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8993 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1707 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 5743 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 2621 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8984 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1036 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 184 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8951 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8994 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 346 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8988 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 400 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 729 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 256 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 475 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8988 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 240 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 445 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 204 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 451 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 281 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 393 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1516 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8968 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 522 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 216 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 785 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1395 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 6704 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 5933 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8996 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 509 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 888 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 595 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 6061 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 851 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 228 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8992 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1322 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 385 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 247 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 242 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 292 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 788 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 4595 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 875 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 188 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 4252 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1220 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8994 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 261 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 214 > v_choose 2
+len(X_) 2  v_choose 2
+=> Acc: 0.824 Precision 0.824 Recall 0.824 F1 0.823 
+=> Acc: 0.882 Precision 0.882 Recall 0.882 F1 0.876 
+=> Acc: 0.850 Precision 0.850 Recall 0.850 F1 0.854 
+=> Acc: 0.683 Precision 0.683 Recall 0.683 F1 0.668 
+=> Acc: 0.757 Precision 0.757 Recall 0.757 F1 0.751 
+=> Acc: 0.684 Precision 0.684 Recall 0.684 F1 0.676 
+=> Acc: 0.878 Precision 0.878 Recall 0.878 F1 0.877 
+=> Acc: 0.777 Precision 0.777 Recall 0.777 F1 0.768 
+=> Acc: 0.828 Precision 0.828 Recall 0.828 F1 0.823 
+=> Acc: 0.939 Precision 0.939 Recall 0.939 F1 0.937 
+=> Acc: 0.850 Precision 0.850 Recall 0.850 F1 0.843 
+=> Acc: 0.948 Precision 0.948 Recall 0.948 F1 0.948 
+=> Acc: 0.823 Precision 0.823 Recall 0.823 F1 0.770 
+=> Acc: 0.922 Precision 0.922 Recall 0.922 F1 0.917 
+=> Acc: 0.947 Precision 0.947 Recall 0.947 F1 0.949 
+=> Acc: 0.870 Precision 0.870 Recall 0.870 F1 0.869 
+=> Acc: 0.952 Precision 0.952 Recall 0.952 F1 0.951 
+
+
+accs [0.824396782841823, 0.8821548821548821, 0.8503430531732419, 0.6833333333333333, 0.7567264573991032, 0.6844547563805105, 0.8777885548011639, 0.7766579973992198, 0.8284272497897393, 0.9390862944162437, 0.8499624906226556, 0.9483747609942639, 0.8225469728601252, 0.9219629927594529, 0.9466666666666667, 0.8698010849909584, 0.9520807061790668]
+ precisions [0.8411528150134048, 0.8855218855218855, 0.8786449399656947, 0.6908333333333333, 0.7623318385650224, 0.6838747099767981, 0.8816682832201745, 0.7639791937581274, 0.8292682926829268, 0.9593908629441624, 0.8439609902475619, 0.9449330783938814, 0.8402922755741128, 0.911504424778761, 0.928, 0.8770343580470162, 0.9470365699873896]
+ recalls [0.8458445040214477, 0.9208754208754208, 0.8666380789022299, 0.66, 0.765695067264574, 0.7076566125290024, 0.8797284190106692, 0.7724317295188556, 0.8376787216148024, 0.934010152284264, 0.8522130532633159, 0.9422562141491396, 0.8319415448851775, 0.9082864038616251, 0.9133333333333333, 0.8740204942736588, 0.9470365699873896]
+ f1scores [0.8359447453092516, 0.9017906212506019, 0.853231398886362, 0.6601327419090613, 0.7604417556309524, 0.7134925047885149, 0.8664962110872901, 0.7611293617886887, 0.8188771781407841, 0.9178146585403969, 0.8312039685806921, 0.9450367665216636, 0.7772932888312243, 0.9231993208662079, 0.9213709358740025, 0.8573242376888919, 0.9687500394717221]
+task 18 =>> taskLabels [85, 86, 87, 88, 89]
+i am Task IFS
+IFS option uniform
+len(X_) 2999 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 7178 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 285 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1120 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1857 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 627 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3030 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 378 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 475 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 831 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1562 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 484 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8968 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 9000 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 958 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 411 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 190 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 382 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8998 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 816 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 759 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1758 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8997 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 228 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 4324 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 494 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 442 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3881 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8993 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1707 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 5743 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 2621 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8984 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1036 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 184 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8951 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8994 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 346 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8988 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 400 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 729 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 256 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 475 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8988 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 240 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 445 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 204 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 451 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 281 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 393 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1516 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8968 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 522 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 216 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 785 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1395 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 6704 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 5933 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8996 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 509 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 888 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 595 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 6061 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 851 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 228 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8992 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1322 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 385 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 247 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 242 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 292 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 788 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 4595 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 875 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 188 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 4252 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1220 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8994 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 261 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 214 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 536 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3242 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 423 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 2339 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 598 > v_choose 2
+len(X_) 2  v_choose 2
+=> Acc: 0.851 Precision 0.851 Recall 0.851 F1 0.852 
+=> Acc: 0.845 Precision 0.845 Recall 0.845 F1 0.836 
+=> Acc: 0.870 Precision 0.870 Recall 0.870 F1 0.872 
+=> Acc: 0.655 Precision 0.655 Recall 0.655 F1 0.617 
+=> Acc: 0.763 Precision 0.763 Recall 0.763 F1 0.757 
+=> Acc: 0.686 Precision 0.686 Recall 0.686 F1 0.663 
+=> Acc: 0.855 Precision 0.855 Recall 0.855 F1 0.857 
+=> Acc: 0.784 Precision 0.784 Recall 0.784 F1 0.765 
+=> Acc: 0.743 Precision 0.743 Recall 0.743 F1 0.689 
+=> Acc: 0.980 Precision 0.980 Recall 0.980 F1 0.981 
+=> Acc: 0.757 Precision 0.757 Recall 0.757 F1 0.753 
+=> Acc: 0.945 Precision 0.945 Recall 0.945 F1 0.945 
+=> Acc: 0.836 Precision 0.836 Recall 0.836 F1 0.789 
+=> Acc: 0.790 Precision 0.790 Recall 0.790 F1 0.758 
+=> Acc: 0.903 Precision 0.903 Recall 0.903 F1 0.898 
+=> Acc: 0.873 Precision 0.873 Recall 0.873 F1 0.866 
+=> Acc: 0.904 Precision 0.904 Recall 0.904 F1 0.903 
+=> Acc: 0.979 Precision 0.979 Recall 0.979 F1 0.979 
+
+
+accs [0.8512064343163539, 0.8451178451178452, 0.869639794168096, 0.655, 0.7628923766816144, 0.6861948955916474, 0.8554801163918526, 0.7841352405721717, 0.7426408746846089, 0.9796954314720813, 0.7569392348087022, 0.9445506692160612, 0.8361169102296451, 0.7900241351568785, 0.9026666666666666, 0.8728149487643159, 0.9041614123581336, 0.9789855072463768]
+ precisions [0.8404825737265416, 0.8501683501683501, 0.8825042881646655, 0.6833333333333333, 0.7897982062780269, 0.6687935034802784, 0.8365664403491756, 0.7708062418725617, 0.7148864592094197, 0.9390862944162437, 0.7696924231057765, 0.9487571701720842, 0.8413361169102297, 0.7932421560740145, 0.9106666666666666, 0.8782399035563593, 0.9192938209331651, 0.9731884057971014]
+ recalls [0.8612600536193029, 0.8602693602693603, 0.8760720411663808, 0.6516666666666666, 0.7825112107623319, 0.6769141531322506, 0.8389912706110573, 0.7652795838751626, 0.7106812447434819, 0.9746192893401016, 0.7854463615903976, 0.9468451242829828, 0.81419624217119, 0.7739340305711987, 0.924, 0.8716094032549728, 0.89281210592686, 0.9695652173913043]
+ f1scores [0.8487149192453382, 0.8589074003684756, 0.8697414793250813, 0.643144320861922, 0.7776719814364174, 0.654433643576845, 0.8415790946573557, 0.7442590026141701, 0.6768571599488794, 0.9223053275227187, 0.7657054038828613, 0.9459383055033289, 0.7830847181551253, 0.7456493163777138, 0.9209740339115801, 0.8701192081494507, 0.8965023603558923, 0.9734051638600452]
+task 19 =>> taskLabels [90, 91, 92, 93, 94]
+i am Task IFS
+IFS option uniform
+len(X_) 2999 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 7178 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 285 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1120 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1857 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 627 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3030 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 378 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 475 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 831 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1562 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 484 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8968 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 9000 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 958 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 411 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 190 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 382 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8998 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 816 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 759 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1758 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8997 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 228 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 4324 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 494 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 442 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3881 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8993 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1707 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 5743 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 2621 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8984 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1036 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 184 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8951 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8994 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 346 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8988 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 400 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 729 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 256 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 475 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8988 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 240 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 445 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 204 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 451 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 281 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 393 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1516 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8968 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 522 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 216 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 785 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1395 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 6704 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 5933 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8996 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 509 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 888 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 595 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 6061 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 851 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 228 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8992 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1322 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 385 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 247 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 242 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 292 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 788 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 4595 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 875 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 188 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 4252 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1220 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8994 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 261 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 214 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 536 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3242 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 423 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 2339 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 598 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8997 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1691 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 233 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 803 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 694 > v_choose 2
+len(X_) 2  v_choose 2
+=> Acc: 0.888 Precision 0.888 Recall 0.888 F1 0.885 
+=> Acc: 0.848 Precision 0.848 Recall 0.848 F1 0.846 
+=> Acc: 0.919 Precision 0.919 Recall 0.919 F1 0.916 
+=> Acc: 0.727 Precision 0.727 Recall 0.727 F1 0.702 
+=> Acc: 0.806 Precision 0.806 Recall 0.806 F1 0.801 
+=> Acc: 0.752 Precision 0.752 Recall 0.752 F1 0.753 
+=> Acc: 0.863 Precision 0.863 Recall 0.863 F1 0.862 
+=> Acc: 0.739 Precision 0.739 Recall 0.739 F1 0.717 
+=> Acc: 0.743 Precision 0.743 Recall 0.743 F1 0.720 
+=> Acc: 0.919 Precision 0.919 Recall 0.919 F1 0.916 
+=> Acc: 0.817 Precision 0.817 Recall 0.817 F1 0.810 
+=> Acc: 0.956 Precision 0.956 Recall 0.956 F1 0.956 
+=> Acc: 0.810 Precision 0.810 Recall 0.810 F1 0.749 
+=> Acc: 0.863 Precision 0.863 Recall 0.863 F1 0.849 
+=> Acc: 0.940 Precision 0.940 Recall 0.940 F1 0.940 
+=> Acc: 0.825 Precision 0.825 Recall 0.825 F1 0.816 
+=> Acc: 0.892 Precision 0.892 Recall 0.892 F1 0.889 
+=> Acc: 0.954 Precision 0.954 Recall 0.954 F1 0.955 
+=> Acc: 0.966 Precision 0.966 Recall 0.966 F1 0.966 
+
+
+accs [0.8880697050938338, 0.8484848484848485, 0.91852487135506, 0.7266666666666667, 0.8060538116591929, 0.7523201856148491, 0.8627546071774975, 0.7386215864759428, 0.7426408746846089, 0.9187817258883249, 0.8169542385596399, 0.9560229445506692, 0.8100208768267223, 0.8632341110217217, 0.94, 0.8245931283905967, 0.8915510718789408, 0.9543478260869566, 0.9659773182121414]
+ precisions [0.8967828418230563, 0.8905723905723906, 0.9116638078902229, 0.7258333333333333, 0.827914798206278, 0.7169373549883991, 0.8622696411251213, 0.738296488946684, 0.7232968881412952, 0.9137055837563451, 0.827456864216054, 0.9506692160611855, 0.791231732776618, 0.8543845534995977, 0.944, 0.8342374924653405, 0.8940731399747793, 0.9405797101449276, 0.9593062041360907]
+ recalls [0.8847184986595175, 0.8703703703703703, 0.9163807890222985, 0.7333333333333333, 0.8329596412556054, 0.7053364269141531, 0.8588748787584869, 0.7522756827048115, 0.7384356602186711, 0.9137055837563451, 0.8432108027006752, 0.9514340344168261, 0.8048016701461378, 0.830249396621078, 0.9253333333333333, 0.840867992766727, 0.8638083228247163, 0.9471014492753623, 0.9646430953969313]
+ f1scores [0.8889050831613836, 0.8824977690898905, 0.9201589106448755, 0.7136712761732129, 0.8253940958721447, 0.7202881757119812, 0.8623580853000423, 0.6998147410426337, 0.7022696273058912, 0.9318817315658657, 0.8041072796881096, 0.9465631095877287, 0.7534391266724356, 0.8351184904672617, 0.9394459168656464, 0.8315837423070969, 0.8765450451759091, 0.9431542171558419, 0.9676634827776756]
+task 20 =>> taskLabels [95, 96, 97, 98, 99]
+i am Task IFS
+IFS option uniform
+len(X_) 2999 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 7178 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 285 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1120 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1857 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 627 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3030 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 378 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 475 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 831 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1562 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 484 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8968 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 9000 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 958 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 411 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 190 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 382 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8998 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 816 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 759 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1758 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8997 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 228 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 4324 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 494 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 442 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3881 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8993 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1707 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 5743 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 2621 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8984 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1036 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 184 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8951 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8994 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 346 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8988 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 400 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 729 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 256 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 475 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8988 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 240 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 445 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 204 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 451 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 281 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 393 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1516 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8968 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 522 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 216 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 785 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1395 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 6704 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 5933 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8996 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 509 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 888 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 595 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 6061 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 851 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 228 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8992 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1322 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 385 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 247 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 242 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 292 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 788 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 4595 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 875 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 188 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 4252 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1220 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8994 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 261 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 214 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 536 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 3242 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 423 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 2339 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 598 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8997 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 1691 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 233 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 803 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 694 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 8996 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 617 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 338 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 2769 > v_choose 2
+len(X_) 2  v_choose 2
+IFS option uniform
+len(X_) 757 > v_choose 2
+len(X_) 2  v_choose 2
+=> Acc: 0.889 Precision 0.889 Recall 0.889 F1 0.885 
+=> Acc: 0.855 Precision 0.855 Recall 0.855 F1 0.861 
+=> Acc: 0.907 Precision 0.907 Recall 0.907 F1 0.904 
+=> Acc: 0.687 Precision 0.687 Recall 0.687 F1 0.653 
+=> Acc: 0.809 Precision 0.809 Recall 0.809 F1 0.801 
+=> Acc: 0.703 Precision 0.703 Recall 0.703 F1 0.694 
+=> Acc: 0.846 Precision 0.846 Recall 0.846 F1 0.848 
+=> Acc: 0.733 Precision 0.733 Recall 0.733 F1 0.707 
+=> Acc: 0.737 Precision 0.737 Recall 0.737 F1 0.723 
+=> Acc: 0.878 Precision 0.878 Recall 0.878 F1 0.868 
+=> Acc: 0.811 Precision 0.811 Recall 0.811 F1 0.806 
+=> Acc: 0.919 Precision 0.919 Recall 0.919 F1 0.919 
+=> Acc: 0.659 Precision 0.659 Recall 0.659 F1 0.570 
+=> Acc: 0.823 Precision 0.823 Recall 0.823 F1 0.814 
+=> Acc: 0.927 Precision 0.927 Recall 0.927 F1 0.926 
+=> Acc: 0.820 Precision 0.820 Recall 0.820 F1 0.812 
+=> Acc: 0.866 Precision 0.866 Recall 0.866 F1 0.872 
+=> Acc: 0.943 Precision 0.943 Recall 0.943 F1 0.941 
+=> Acc: 0.961 Precision 0.961 Recall 0.961 F1 0.961 
+=> Acc: 0.971 Precision 0.971 Recall 0.971 F1 0.970 
+
+
+accs [0.8887399463806971, 0.8552188552188552, 0.9073756432246999, 0.6866666666666666, 0.8094170403587444, 0.703016241299304, 0.8462657613967022, 0.7327698309492848, 0.736753574432296, 0.8781725888324873, 0.8109527381845462, 0.9193116634799235, 0.6586638830897703, 0.8230088495575221, 0.9266666666666666, 0.8197709463532248, 0.8663303909205549, 0.9427536231884058, 0.9613075383589059, 0.9705449189985272]
+ precisions [0.896112600536193, 0.8821548821548821, 0.9168096054888508, 0.7108333333333333, 0.8116591928251121, 0.7117169373549884, 0.8671193016488846, 0.7252925877763329, 0.7308662741799832, 0.883248730964467, 0.792198049512378, 0.9376673040152964, 0.6492693110647182, 0.8077232502011263, 0.936, 0.8324291742013261, 0.8751576292559899, 0.9528985507246377, 0.9466310873915944, 0.9764359351988218]
+ recalls [0.8887399463806971, 0.8367003367003367, 0.9073756432246999, 0.7091666666666666, 0.8217488789237668, 0.7175174013921114, 0.8399612027158099, 0.7223667100130039, 0.7451640033641715, 0.8527918781725888, 0.8192048012003, 0.9269598470363288, 0.662839248434238, 0.7980691874497184, 0.948, 0.814948764315853, 0.8713745271122321, 0.9340579710144927, 0.9406270847231488, 0.9690721649484536]
+ f1scores [0.90864765566656, 0.8698146582276989, 0.9064877287524599, 0.6827476873930179, 0.8119653832700793, 0.6986948521558276, 0.8475573268781063, 0.7156341615327744, 0.7171835512352696, 0.9351840129067852, 0.7979810924980306, 0.9247382704874154, 0.5738465253368299, 0.7924121534235653, 0.9240255976572673, 0.8023005225258586, 0.8812116843037554, 0.9476844461691613, 0.9467621666130558, 0.9716373327998682]
+done w/ time
+All done

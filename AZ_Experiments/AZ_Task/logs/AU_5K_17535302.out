@@ -1,0 +1,298 @@
+Current date and time 
+##### START task 10000 aws #####
+Start w/ time
+CUDA is used
+
+Preparing the data...
+ Training data X (257023, 2439) Y (257023,)
+ Test data X (28559, 2439) Y (28559,)
+
+Parameter-stamp...
+ --> task:          AZ_Task20-task
+ --> model:         ember_MLP
+ --> hyper-params:  i10000-lr0.001-b256-sgd
+AZ_Task20-task--ember_MLP--i10000-lr0.001-b256-sgd--
+
+----------------------------------------MAIN MODEL----------------------------------------
+Classifier(
+  (flatten): Flatten()
+  (fcE): AZ_MLP_Net(
+    (fc0): Linear(in_features=2439, out_features=2048, bias=True)
+    (fc0_bn): BatchNorm1d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act0): ReLU()
+    (fc0_drop): Dropout(p=0.5, inplace=False)
+    (fc1): Linear(in_features=2048, out_features=1024, bias=True)
+    (fc1_bn): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act1): ReLU()
+    (fc1_drop): Dropout(p=0.5, inplace=False)
+    (fc2): Linear(in_features=1024, out_features=512, bias=True)
+    (fc2_bn): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act2): ReLU()
+    (fc2_drop): Dropout(p=0.5, inplace=False)
+    (fc3): Linear(in_features=512, out_features=256, bias=True)
+    (fc3_bn): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act3): ReLU()
+    (fc3_drop): Dropout(p=0.5, inplace=False)
+    (fc4): Linear(in_features=256, out_features=128, bias=True)
+    (fc4_bn): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act4): ReLU()
+    (fc4_drop): Dropout(p=0.5, inplace=False)
+  )
+  (classifier): AZ_Classifier(
+    (fc_last): Linear(in_features=128, out_features=100, bias=True)
+  )
+)
+------------------------------------------------------------------------------------------
+--> this network has 7805156 parameters (~7.8 million)
+      of which: - learnable: 7805156 (~7.8 million)
+                - fixed: 0 (~0.0 million)
+------------------------------------------------------------------------------------------
+
+Training...
+task 1 =>> taskLabels [0, 1, 2, 3, 4]
+=> Acc: 0.998 Precision 0.998 Recall 0.998 F1 0.998 
+
+
+accs [0.9983079526226735]
+ precisions [0.9991539763113367]
+ recalls [0.9983079526226735]
+ f1scores [0.9991432664104953]
+task 2 =>> taskLabels [5, 6, 7, 8, 9]
+done w/ time
+Start w/ time
+CUDA is used
+
+Preparing the data...
+ Training data X (257023, 2439) Y (257023,)
+ Test data X (28559, 2439) Y (28559,)
+
+Parameter-stamp...
+ --> task:          AZ_Task20-task
+ --> model:         ember_MLP
+ --> hyper-params:  i10000-lr0.001-b256-sgd
+AZ_Task20-task--ember_MLP--i10000-lr0.001-b256-sgd--
+
+----------------------------------------MAIN MODEL----------------------------------------
+Classifier(
+  (flatten): Flatten()
+  (fcE): AZ_MLP_Net(
+    (fc0): Linear(in_features=2439, out_features=2048, bias=True)
+    (fc0_bn): BatchNorm1d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act0): ReLU()
+    (fc0_drop): Dropout(p=0.5, inplace=False)
+    (fc1): Linear(in_features=2048, out_features=1024, bias=True)
+    (fc1_bn): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act1): ReLU()
+    (fc1_drop): Dropout(p=0.5, inplace=False)
+    (fc2): Linear(in_features=1024, out_features=512, bias=True)
+    (fc2_bn): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act2): ReLU()
+    (fc2_drop): Dropout(p=0.5, inplace=False)
+    (fc3): Linear(in_features=512, out_features=256, bias=True)
+    (fc3_bn): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act3): ReLU()
+    (fc3_drop): Dropout(p=0.5, inplace=False)
+    (fc4): Linear(in_features=256, out_features=128, bias=True)
+    (fc4_bn): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act4): ReLU()
+    (fc4_drop): Dropout(p=0.5, inplace=False)
+  )
+  (classifier): AZ_Classifier(
+    (fc_last): Linear(in_features=128, out_features=100, bias=True)
+  )
+)
+------------------------------------------------------------------------------------------
+--> this network has 7805156 parameters (~7.8 million)
+      of which: - learnable: 7805156 (~7.8 million)
+                - fixed: 0 (~0.0 million)
+------------------------------------------------------------------------------------------
+
+Training...
+task 1 =>> taskLabels [0, 1, 2, 3, 4]
+=> Acc: 1.000 Precision 1.000 Recall 1.000 F1 1.000 
+
+
+accs [1.0]
+ precisions [0.9976947902259106]
+ recalls [0.9990779160903642]
+ f1scores [0.9995535664238104]
+task 2 =>> taskLabels [5, 6, 7, 8, 9]
+done w/ time
+Start w/ time
+CUDA is used
+
+Preparing the data...
+ Training data X (257023, 2439) Y (257023,)
+ Test data X (28559, 2439) Y (28559,)
+
+Parameter-stamp...
+ --> task:          AZ_Task20-task
+ --> model:         ember_MLP
+ --> hyper-params:  i10000-lr0.001-b256-sgd
+AZ_Task20-task--ember_MLP--i10000-lr0.001-b256-sgd--
+
+----------------------------------------MAIN MODEL----------------------------------------
+Classifier(
+  (flatten): Flatten()
+  (fcE): AZ_MLP_Net(
+    (fc0): Linear(in_features=2439, out_features=2048, bias=True)
+    (fc0_bn): BatchNorm1d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act0): ReLU()
+    (fc0_drop): Dropout(p=0.5, inplace=False)
+    (fc1): Linear(in_features=2048, out_features=1024, bias=True)
+    (fc1_bn): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act1): ReLU()
+    (fc1_drop): Dropout(p=0.5, inplace=False)
+    (fc2): Linear(in_features=1024, out_features=512, bias=True)
+    (fc2_bn): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act2): ReLU()
+    (fc2_drop): Dropout(p=0.5, inplace=False)
+    (fc3): Linear(in_features=512, out_features=256, bias=True)
+    (fc3_bn): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act3): ReLU()
+    (fc3_drop): Dropout(p=0.5, inplace=False)
+    (fc4): Linear(in_features=256, out_features=128, bias=True)
+    (fc4_bn): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act4): ReLU()
+    (fc4_drop): Dropout(p=0.5, inplace=False)
+  )
+  (classifier): AZ_Classifier(
+    (fc_last): Linear(in_features=128, out_features=100, bias=True)
+  )
+)
+------------------------------------------------------------------------------------------
+--> this network has 7805156 parameters (~7.8 million)
+      of which: - learnable: 7805156 (~7.8 million)
+                - fixed: 0 (~0.0 million)
+------------------------------------------------------------------------------------------
+
+Training...
+task 1 =>> taskLabels [0, 1, 2, 3, 4]
+=> Acc: 0.972 Precision 0.972 Recall 0.972 F1 0.972 
+
+
+accs [0.9721518987341772]
+ precisions [0.9721518987341772]
+ recalls [0.9746835443037974]
+ f1scores [0.9771933875972307]
+task 2 =>> taskLabels [5, 6, 7, 8, 9]
+done w/ time
+Start w/ time
+CUDA is used
+
+Preparing the data...
+ Training data X (257023, 2439) Y (257023,)
+ Test data X (28559, 2439) Y (28559,)
+
+Parameter-stamp...
+ --> task:          AZ_Task20-task
+ --> model:         ember_MLP
+ --> hyper-params:  i10000-lr0.001-b256-sgd
+AZ_Task20-task--ember_MLP--i10000-lr0.001-b256-sgd--
+
+----------------------------------------MAIN MODEL----------------------------------------
+Classifier(
+  (flatten): Flatten()
+  (fcE): AZ_MLP_Net(
+    (fc0): Linear(in_features=2439, out_features=2048, bias=True)
+    (fc0_bn): BatchNorm1d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act0): ReLU()
+    (fc0_drop): Dropout(p=0.5, inplace=False)
+    (fc1): Linear(in_features=2048, out_features=1024, bias=True)
+    (fc1_bn): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act1): ReLU()
+    (fc1_drop): Dropout(p=0.5, inplace=False)
+    (fc2): Linear(in_features=1024, out_features=512, bias=True)
+    (fc2_bn): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act2): ReLU()
+    (fc2_drop): Dropout(p=0.5, inplace=False)
+    (fc3): Linear(in_features=512, out_features=256, bias=True)
+    (fc3_bn): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act3): ReLU()
+    (fc3_drop): Dropout(p=0.5, inplace=False)
+    (fc4): Linear(in_features=256, out_features=128, bias=True)
+    (fc4_bn): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act4): ReLU()
+    (fc4_drop): Dropout(p=0.5, inplace=False)
+  )
+  (classifier): AZ_Classifier(
+    (fc_last): Linear(in_features=128, out_features=100, bias=True)
+  )
+)
+------------------------------------------------------------------------------------------
+--> this network has 7805156 parameters (~7.8 million)
+      of which: - learnable: 7805156 (~7.8 million)
+                - fixed: 0 (~0.0 million)
+------------------------------------------------------------------------------------------
+
+Training...
+task 1 =>> taskLabels [0, 1, 2, 3, 4]
+=> Acc: 0.988 Precision 0.988 Recall 0.988 F1 0.988 
+
+
+accs [0.9879302637460885]
+ precisions [0.9955297273133661]
+ recalls [0.9950827000447027]
+ f1scores [0.9912458673952929]
+task 2 =>> taskLabels [5, 6, 7, 8, 9]
+done w/ time
+Start w/ time
+CUDA is used
+
+Preparing the data...
+ Training data X (257023, 2439) Y (257023,)
+ Test data X (28559, 2439) Y (28559,)
+
+Parameter-stamp...
+ --> task:          AZ_Task20-task
+ --> model:         ember_MLP
+ --> hyper-params:  i10000-lr0.001-b256-sgd
+AZ_Task20-task--ember_MLP--i10000-lr0.001-b256-sgd--
+
+----------------------------------------MAIN MODEL----------------------------------------
+Classifier(
+  (flatten): Flatten()
+  (fcE): AZ_MLP_Net(
+    (fc0): Linear(in_features=2439, out_features=2048, bias=True)
+    (fc0_bn): BatchNorm1d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act0): ReLU()
+    (fc0_drop): Dropout(p=0.5, inplace=False)
+    (fc1): Linear(in_features=2048, out_features=1024, bias=True)
+    (fc1_bn): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act1): ReLU()
+    (fc1_drop): Dropout(p=0.5, inplace=False)
+    (fc2): Linear(in_features=1024, out_features=512, bias=True)
+    (fc2_bn): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act2): ReLU()
+    (fc2_drop): Dropout(p=0.5, inplace=False)
+    (fc3): Linear(in_features=512, out_features=256, bias=True)
+    (fc3_bn): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act3): ReLU()
+    (fc3_drop): Dropout(p=0.5, inplace=False)
+    (fc4): Linear(in_features=256, out_features=128, bias=True)
+    (fc4_bn): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act4): ReLU()
+    (fc4_drop): Dropout(p=0.5, inplace=False)
+  )
+  (classifier): AZ_Classifier(
+    (fc_last): Linear(in_features=128, out_features=100, bias=True)
+  )
+)
+------------------------------------------------------------------------------------------
+--> this network has 7805156 parameters (~7.8 million)
+      of which: - learnable: 7805156 (~7.8 million)
+                - fixed: 0 (~0.0 million)
+------------------------------------------------------------------------------------------
+
+Training...
+task 1 =>> taskLabels [0, 1, 2, 3, 4]
+=> Acc: 0.998 Precision 0.998 Recall 0.998 F1 0.998 
+
+
+accs [0.9983347210657785]
+ precisions [0.9958368026644463]
+ recalls [1.0]
+ f1scores [0.996622969506982]
+task 2 =>> taskLabels [5, 6, 7, 8, 9]
+done w/ time
+All done

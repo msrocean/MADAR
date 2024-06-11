@@ -1,0 +1,21 @@
+  0%|                                                                                           | 0/10000 [00:00<?, ?it/s]  0%|                                                                                           | 0/10000 [01:22<?, ?it/s]
+  0%|                                                                                           | 0/10000 [00:00<?, ?it/s]  0%|                                                                                           | 0/10000 [01:41<?, ?it/s]
+  0%|                                                                                           | 0/10000 [00:00<?, ?it/s]  0%|                                                                                           | 0/10000 [01:56<?, ?it/s]
+  0%|                                                                                           | 0/10000 [00:00<?, ?it/s]  0%|                                                                                           | 0/10000 [02:17<?, ?it/s]
+  0%|                                                                                           | 0/10000 [00:00<?, ?it/s]  0%|                                                                                           | 0/10000 [02:34<?, ?it/s]
+  0%|                                                                                           | 0/10000 [00:00<?, ?it/s]  0%|                                                                                           | 0/10000 [02:53<?, ?it/s]
+  0%|                                                                                           | 0/10000 [00:00<?, ?it/s]  0%|                                                                                           | 0/10000 [03:13<?, ?it/s]
+  0%|                                                                                           | 0/10000 [00:00<?, ?it/s]  0%|                                                                                           | 0/10000 [03:37<?, ?it/s]
+  0%|                                                                                           | 0/10000 [00:00<?, ?it/s]  0%|                                                                                           | 0/10000 [03:56<?, ?it/s]
+Traceback (most recent call last):
+  File "main.py", line 324, in <module>
+    run(args, verbose=True)
+  File "main.py", line 313, in run
+    metric_cbs=metric_cbs, use_exemplars=args.use_exemplars, add_exemplars=args.add_exemplars,
+  File "/home/mr6564/continual_research/Project_2_CL_Malware/CL-IFSAWS-Malware/AZ_Task/train_diversity.py", line 996, in train_cl
+    prev_replay_X, prev_replay_Y = getReplaySamples(model, ember_train, labels_per_task[:task-1], args) 
+  File "/home/mr6564/continual_research/Project_2_CL_Malware/CL-IFSAWS-Malware/AZ_Task/train_diversity.py", line 619, in getReplaySamples
+    all_replay_X, all_replay_Y = getGRSSamples(all_replay_X, all_replay_Y, memory_budget)        
+  File "/home/mr6564/continual_research/Project_2_CL_Malware/CL-IFSAWS-Malware/AZ_Task/train_diversity.py", line 503, in getGRSSamples
+    assert np.unique(Y_train).all() == np.unique(Y).all()
+AssertionError

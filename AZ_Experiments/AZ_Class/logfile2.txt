@@ -1,0 +1,1719 @@
+CUDA is used
+
+Preparing the data...
+ Training data X (303331, 2381) Y (303331,)
+ Test data X (33704, 2381) Y (33704,)
+
+Parameter-stamp...
+ --> task:          EMBER_Class11-class
+ --> model:         ember_MLP
+ --> hyper-params:  i2-lr0.001-lrGNone-b512-sgd
+EMBER_Class11-class--ember_MLP--i2-lr0.001-lrGNone-b512-sgd--
+
+----------------------------------------MAIN MODEL----------------------------------------
+Classifier(
+  (flatten): Flatten()
+  (fcE): MLP(
+    (fcLayer1): fc_layer(
+      (linear): LinearExcitability(in_features=2381, out_features=1024)
+      (bn): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (nl): ReLU()
+    )
+    (fcLayer2): fc_layer(
+      (linear): LinearExcitability(in_features=1024, out_features=512)
+      (bn): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (nl): ReLU()
+    )
+    (fcLayer3): fc_layer(
+      (linear): LinearExcitability(in_features=512, out_features=256)
+      (bn): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (nl): ReLU()
+    )
+    (fcLayer4): fc_layer(
+      (linear): LinearExcitability(in_features=256, out_features=128)
+      (bn): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (nl): ReLU()
+    )
+  )
+  (classifier): fc_layer(
+    (linear): LinearExcitability(in_features=128, out_features=100)
+  )
+)
+------------------------------------------------------------------------------------------
+--> this network has 3143012 parameters (~3.1 million)
+      of which: - learnable: 3143012 (~3.1 million)
+                - fixed: 0 (~0.0 million)
+------------------------------------------------------------------------------------------
+
+Training...
+Namespace(add_exemplars=False, agem=False, batch=512, bce=False, bce_distill=False, budget=1000, cuda=True, d_dir='../../../ember2018/top_class_bases/top_classes_100', dataset='EMBER', distill=False, emp_fi=False, epoch=30, epsilon=0.1, ewc=False, ewc_lambda=None, exp_name=None, experiment='EMBER_Class', fc_bn='yes', fc_drop=0.0, fc_lay=5, fc_nl='relu', fc_units=1024, feedback=False, fisher_n=None, g_fc_lay=None, g_fc_uni=None, g_iters=None, g_z_dim=100, gamma=None, gating_prop=None, get_stamp=False, herding=False, icarl=False, init_classes=50, iters=2, log_per_task=False, logger_file=None, loss_log=200, lr=0.001, lr_gen=None, metrics=True, norm_exemplars=False, num_replay_sample=200, online=False, optimizer='sgd', p_dir='./plots', pdf=False, prec_log=200, prec_n=1024, r_dir='./results', replay='offline', replay_config='ifs', replay_portion=1.0, sample_log=500, sample_n=64, scenario='class', seed=6756, si=False, si_c=None, singlehead=False, target_classes=100, tasks=11, temp=2.0, time=False, use_exemplars=False, visdom=False, xdg=False, z_dim=100)
+
+
+ all_X (138906, 2381) all_Y (138906,)
+
+=> F1Score 0.004 Precision 0.027
+[0.027198961376176566] 0.027198961376176566
+anomalous_samples 169 similar_samples 1520
+Num replay samples 1689
+anomalous_samples 71 similar_samples 640
+Num replay samples 711
+anomalous_samples 148 similar_samples 1333
+Num replay samples 1481
+anomalous_samples 100 similar_samples 2618
+Num replay samples 2718
+anomalous_samples 100 similar_samples 3820
+Num replay samples 3920
+anomalous_samples 108 similar_samples 973
+Num replay samples 1081
+anomalous_samples 94 similar_samples 845
+Num replay samples 939
+anomalous_samples 100 similar_samples 3210
+Num replay samples 3310
+anomalous_samples 55 similar_samples 494
+Num replay samples 549
+anomalous_samples 46 similar_samples 408
+Num replay samples 454
+anomalous_samples 151 similar_samples 1357
+Num replay samples 1508
+anomalous_samples 54 similar_samples 485
+Num replay samples 539
+anomalous_samples 100 similar_samples 2407
+Num replay samples 2507
+anomalous_samples 68 similar_samples 610
+Num replay samples 678
+anomalous_samples 100 similar_samples 2540
+Num replay samples 2640
+anomalous_samples 44 similar_samples 397
+Num replay samples 441
+anomalous_samples 145 similar_samples 1299
+Num replay samples 1444
+anomalous_samples 100 similar_samples 1965
+Num replay samples 2065
+anomalous_samples 46 similar_samples 414
+Num replay samples 460
+anomalous_samples 100 similar_samples 3649
+Num replay samples 3749
+anomalous_samples 100 similar_samples 3970
+Num replay samples 4070
+anomalous_samples 107 similar_samples 962
+Num replay samples 1069
+anomalous_samples 177 similar_samples 1591
+Num replay samples 1768
+anomalous_samples 58 similar_samples 516
+Num replay samples 574
+anomalous_samples 100 similar_samples 19540
+Num replay samples 19640
+anomalous_samples 102 similar_samples 918
+Num replay samples 1020
+anomalous_samples 120 similar_samples 1072
+Num replay samples 1192
+anomalous_samples 161 similar_samples 1450
+Num replay samples 1611
+anomalous_samples 100 similar_samples 9892
+Num replay samples 9992
+anomalous_samples 41 similar_samples 365
+Num replay samples 406
+anomalous_samples 100 similar_samples 5826
+Num replay samples 5926
+anomalous_samples 80 similar_samples 718
+Num replay samples 798
+anomalous_samples 100 similar_samples 13510
+Num replay samples 13610
+anomalous_samples 52 similar_samples 462
+Num replay samples 514
+anomalous_samples 58 similar_samples 525
+Num replay samples 583
+anomalous_samples 66 similar_samples 594
+Num replay samples 660
+anomalous_samples 129 similar_samples 1159
+Num replay samples 1288
+anomalous_samples 100 similar_samples 6642
+Num replay samples 6742
+anomalous_samples 67 similar_samples 599
+Num replay samples 666
+anomalous_samples 82 similar_samples 733
+Num replay samples 815
+anomalous_samples 107 similar_samples 957
+Num replay samples 1064
+anomalous_samples 62 similar_samples 556
+Num replay samples 618
+anomalous_samples 92 similar_samples 828
+Num replay samples 920
+anomalous_samples 65 similar_samples 577
+Num replay samples 642
+anomalous_samples 43 similar_samples 388
+Num replay samples 431
+anomalous_samples 100 similar_samples 2737
+Num replay samples 2837
+anomalous_samples 100 similar_samples 10476
+Num replay samples 10576
+anomalous_samples 100 similar_samples 4194
+Num replay samples 4294
+anomalous_samples 136 similar_samples 1221
+Num replay samples 1357
+anomalous_samples 116 similar_samples 1039
+Num replay samples 1155
+all_current_X (20774, 2381) all_replay_X (129721, 2381)
+
+
+ all_X (150495, 2381) all_Y (150495,)
+
+=> F1Score 0.007 Precision 0.032
+=> F1Score 0.003 Precision 0.002
+[0.032067510548523206, 0.0017331022530329288] 0.016900306400778067
+anomalous_samples 169 similar_samples 1520
+Num replay samples 1689
+anomalous_samples 71 similar_samples 640
+Num replay samples 711
+anomalous_samples 148 similar_samples 1333
+Num replay samples 1481
+anomalous_samples 100 similar_samples 2618
+Num replay samples 2718
+anomalous_samples 100 similar_samples 3820
+Num replay samples 3920
+anomalous_samples 108 similar_samples 973
+Num replay samples 1081
+anomalous_samples 94 similar_samples 845
+Num replay samples 939
+anomalous_samples 100 similar_samples 3210
+Num replay samples 3310
+anomalous_samples 55 similar_samples 494
+Num replay samples 549
+anomalous_samples 46 similar_samples 408
+Num replay samples 454
+anomalous_samples 151 similar_samples 1357
+Num replay samples 1508
+anomalous_samples 54 similar_samples 485
+Num replay samples 539
+anomalous_samples 100 similar_samples 2407
+Num replay samples 2507
+anomalous_samples 68 similar_samples 610
+Num replay samples 678
+anomalous_samples 100 similar_samples 2540
+Num replay samples 2640
+anomalous_samples 44 similar_samples 397
+Num replay samples 441
+anomalous_samples 145 similar_samples 1299
+Num replay samples 1444
+anomalous_samples 100 similar_samples 1965
+Num replay samples 2065
+anomalous_samples 46 similar_samples 414
+Num replay samples 460
+anomalous_samples 100 similar_samples 3649
+Num replay samples 3749
+anomalous_samples 100 similar_samples 3970
+Num replay samples 4070
+anomalous_samples 107 similar_samples 962
+Num replay samples 1069
+anomalous_samples 177 similar_samples 1591
+Num replay samples 1768
+anomalous_samples 58 similar_samples 516
+Num replay samples 574
+anomalous_samples 100 similar_samples 19541
+Num replay samples 19641
+anomalous_samples 102 similar_samples 918
+Num replay samples 1020
+anomalous_samples 120 similar_samples 1072
+Num replay samples 1192
+anomalous_samples 161 similar_samples 1450
+Num replay samples 1611
+anomalous_samples 100 similar_samples 9892
+Num replay samples 9992
+anomalous_samples 41 similar_samples 365
+Num replay samples 406
+anomalous_samples 100 similar_samples 5826
+Num replay samples 5926
+anomalous_samples 80 similar_samples 718
+Num replay samples 798
+anomalous_samples 100 similar_samples 13510
+Num replay samples 13610
+anomalous_samples 52 similar_samples 462
+Num replay samples 514
+anomalous_samples 59 similar_samples 524
+Num replay samples 583
+anomalous_samples 66 similar_samples 594
+Num replay samples 660
+anomalous_samples 129 similar_samples 1159
+Num replay samples 1288
+anomalous_samples 100 similar_samples 6642
+Num replay samples 6742
+anomalous_samples 67 similar_samples 599
+Num replay samples 666
+anomalous_samples 82 similar_samples 733
+Num replay samples 815
+anomalous_samples 106 similar_samples 958
+Num replay samples 1064
+anomalous_samples 62 similar_samples 556
+Num replay samples 618
+anomalous_samples 92 similar_samples 828
+Num replay samples 920
+anomalous_samples 65 similar_samples 577
+Num replay samples 642
+anomalous_samples 43 similar_samples 388
+Num replay samples 431
+anomalous_samples 100 similar_samples 2737
+Num replay samples 2837
+anomalous_samples 100 similar_samples 10476
+Num replay samples 10576
+anomalous_samples 100 similar_samples 4194
+Num replay samples 4294
+anomalous_samples 136 similar_samples 1221
+Num replay samples 1357
+anomalous_samples 116 similar_samples 1039
+Num replay samples 1155
+anomalous_samples 156 similar_samples 1397
+Num replay samples 1553
+anomalous_samples 67 similar_samples 604
+Num replay samples 671
+anomalous_samples 100 similar_samples 15039
+Num replay samples 15139
+anomalous_samples 41 similar_samples 363
+Num replay samples 404
+anomalous_samples 144 similar_samples 1292
+Num replay samples 1436
+all_current_X (21356, 2381) all_replay_X (148925, 2381)
+
+
+ all_X (170281, 2381) all_Y (170281,)
+
+=> F1Score 0.011 Precision 0.044
+=> F1Score 0.102 Precision 0.071
+=> F1Score 0.000 Precision 0.000
+[0.04388185654008439, 0.07062391681109186, 0.0] 0.038168591117058746
+anomalous_samples 169 similar_samples 1520
+Num replay samples 1689
+anomalous_samples 71 similar_samples 640
+Num replay samples 711
+anomalous_samples 148 similar_samples 1333
+Num replay samples 1481
+anomalous_samples 100 similar_samples 2618
+Num replay samples 2718
+anomalous_samples 100 similar_samples 3820
+Num replay samples 3920
+anomalous_samples 108 similar_samples 973
+Num replay samples 1081
+anomalous_samples 94 similar_samples 845
+Num replay samples 939
+anomalous_samples 100 similar_samples 3211
+Num replay samples 3311
+anomalous_samples 55 similar_samples 494
+Num replay samples 549
+anomalous_samples 46 similar_samples 408
+Num replay samples 454
+anomalous_samples 151 similar_samples 1357
+Num replay samples 1508
+anomalous_samples 54 similar_samples 485
+Num replay samples 539
+anomalous_samples 100 similar_samples 2407
+Num replay samples 2507
+anomalous_samples 68 similar_samples 610
+Num replay samples 678
+anomalous_samples 100 similar_samples 2540
+Num replay samples 2640
+anomalous_samples 44 similar_samples 397
+Num replay samples 441
+anomalous_samples 145 similar_samples 1299
+Num replay samples 1444
+anomalous_samples 100 similar_samples 1966
+Num replay samples 2066
+anomalous_samples 46 similar_samples 414
+Num replay samples 460
+anomalous_samples 100 similar_samples 3649
+Num replay samples 3749
+anomalous_samples 100 similar_samples 3970
+Num replay samples 4070
+anomalous_samples 107 similar_samples 962
+Num replay samples 1069
+anomalous_samples 177 similar_samples 1591
+Num replay samples 1768
+anomalous_samples 58 similar_samples 516
+Num replay samples 574
+anomalous_samples 100 similar_samples 19541
+Num replay samples 19641
+anomalous_samples 102 similar_samples 918
+Num replay samples 1020
+anomalous_samples 120 similar_samples 1072
+Num replay samples 1192
+anomalous_samples 161 similar_samples 1450
+Num replay samples 1611
+anomalous_samples 100 similar_samples 9892
+Num replay samples 9992
+anomalous_samples 41 similar_samples 365
+Num replay samples 406
+anomalous_samples 100 similar_samples 5826
+Num replay samples 5926
+anomalous_samples 80 similar_samples 718
+Num replay samples 798
+anomalous_samples 100 similar_samples 13510
+Num replay samples 13610
+anomalous_samples 52 similar_samples 462
+Num replay samples 514
+anomalous_samples 59 similar_samples 524
+Num replay samples 583
+anomalous_samples 66 similar_samples 594
+Num replay samples 660
+anomalous_samples 129 similar_samples 1159
+Num replay samples 1288
+anomalous_samples 100 similar_samples 6642
+Num replay samples 6742
+anomalous_samples 67 similar_samples 599
+Num replay samples 666
+anomalous_samples 82 similar_samples 733
+Num replay samples 815
+anomalous_samples 107 similar_samples 957
+Num replay samples 1064
+anomalous_samples 62 similar_samples 556
+Num replay samples 618
+anomalous_samples 92 similar_samples 828
+Num replay samples 920
+anomalous_samples 65 similar_samples 577
+Num replay samples 642
+anomalous_samples 43 similar_samples 388
+Num replay samples 431
+anomalous_samples 100 similar_samples 2737
+Num replay samples 2837
+anomalous_samples 100 similar_samples 10476
+Num replay samples 10576
+anomalous_samples 100 similar_samples 4195
+Num replay samples 4295
+anomalous_samples 136 similar_samples 1221
+Num replay samples 1357
+anomalous_samples 116 similar_samples 1039
+Num replay samples 1155
+anomalous_samples 156 similar_samples 1397
+Num replay samples 1553
+anomalous_samples 67 similar_samples 604
+Num replay samples 671
+anomalous_samples 100 similar_samples 15039
+Num replay samples 15139
+anomalous_samples 41 similar_samples 363
+Num replay samples 404
+anomalous_samples 144 similar_samples 1292
+Num replay samples 1436
+anomalous_samples 104 similar_samples 935
+Num replay samples 1039
+anomalous_samples 39 similar_samples 351
+Num replay samples 390
+anomalous_samples 100 similar_samples 16639
+Num replay samples 16739
+anomalous_samples 40 similar_samples 359
+Num replay samples 399
+anomalous_samples 104 similar_samples 936
+Num replay samples 1040
+all_current_X (9431, 2381) all_replay_X (168535, 2381)
+
+
+ all_X (177966, 2381) all_Y (177966,)
+
+=> F1Score 0.014 Precision 0.046
+=> F1Score 0.104 Precision 0.072
+=> F1Score 0.000 Precision 0.000
+=> F1Score 0.000 Precision 0.000
+[0.04589419019798767, 0.07235701906412478, 0.0, 0.0] 0.029562802315528113
+anomalous_samples 169 similar_samples 1520
+Num replay samples 1689
+anomalous_samples 71 similar_samples 640
+Num replay samples 711
+anomalous_samples 148 similar_samples 1333
+Num replay samples 1481
+anomalous_samples 100 similar_samples 2618
+Num replay samples 2718
+anomalous_samples 100 similar_samples 3820
+Num replay samples 3920
+anomalous_samples 108 similar_samples 973
+Num replay samples 1081
+anomalous_samples 94 similar_samples 845
+Num replay samples 939
+anomalous_samples 100 similar_samples 3210
+Num replay samples 3310
+anomalous_samples 55 similar_samples 494
+Num replay samples 549
+anomalous_samples 46 similar_samples 408
+Num replay samples 454
+anomalous_samples 151 similar_samples 1357
+Num replay samples 1508
+anomalous_samples 54 similar_samples 485
+Num replay samples 539
+anomalous_samples 100 similar_samples 2407
+Num replay samples 2507
+anomalous_samples 68 similar_samples 610
+Num replay samples 678
+anomalous_samples 100 similar_samples 2540
+Num replay samples 2640
+anomalous_samples 44 similar_samples 397
+Num replay samples 441
+anomalous_samples 145 similar_samples 1299
+Num replay samples 1444
+anomalous_samples 100 similar_samples 1966
+Num replay samples 2066
+anomalous_samples 46 similar_samples 414
+Num replay samples 460
+anomalous_samples 100 similar_samples 3649
+Num replay samples 3749
+anomalous_samples 100 similar_samples 3970
+Num replay samples 4070
+anomalous_samples 107 similar_samples 962
+Num replay samples 1069
+anomalous_samples 177 similar_samples 1591
+Num replay samples 1768
+anomalous_samples 58 similar_samples 516
+Num replay samples 574
+anomalous_samples 100 similar_samples 19540
+Num replay samples 19640
+anomalous_samples 102 similar_samples 918
+Num replay samples 1020
+anomalous_samples 120 similar_samples 1072
+Num replay samples 1192
+anomalous_samples 161 similar_samples 1450
+Num replay samples 1611
+anomalous_samples 100 similar_samples 9892
+Num replay samples 9992
+anomalous_samples 41 similar_samples 365
+Num replay samples 406
+anomalous_samples 100 similar_samples 5826
+Num replay samples 5926
+anomalous_samples 80 similar_samples 718
+Num replay samples 798
+anomalous_samples 100 similar_samples 13510
+Num replay samples 13610
+anomalous_samples 52 similar_samples 462
+Num replay samples 514
+anomalous_samples 59 similar_samples 524
+Num replay samples 583
+anomalous_samples 66 similar_samples 594
+Num replay samples 660
+anomalous_samples 129 similar_samples 1159
+Num replay samples 1288
+anomalous_samples 100 similar_samples 6642
+Num replay samples 6742
+anomalous_samples 66 similar_samples 600
+Num replay samples 666
+anomalous_samples 82 similar_samples 733
+Num replay samples 815
+anomalous_samples 107 similar_samples 957
+Num replay samples 1064
+anomalous_samples 62 similar_samples 556
+Num replay samples 618
+anomalous_samples 92 similar_samples 828
+Num replay samples 920
+anomalous_samples 65 similar_samples 577
+Num replay samples 642
+anomalous_samples 43 similar_samples 388
+Num replay samples 431
+anomalous_samples 100 similar_samples 2737
+Num replay samples 2837
+anomalous_samples 100 similar_samples 10476
+Num replay samples 10576
+anomalous_samples 100 similar_samples 4194
+Num replay samples 4294
+anomalous_samples 136 similar_samples 1221
+Num replay samples 1357
+anomalous_samples 116 similar_samples 1039
+Num replay samples 1155
+anomalous_samples 156 similar_samples 1397
+Num replay samples 1553
+anomalous_samples 67 similar_samples 604
+Num replay samples 671
+anomalous_samples 100 similar_samples 15039
+Num replay samples 15139
+anomalous_samples 41 similar_samples 363
+Num replay samples 404
+anomalous_samples 144 similar_samples 1292
+Num replay samples 1436
+anomalous_samples 104 similar_samples 935
+Num replay samples 1039
+anomalous_samples 39 similar_samples 351
+Num replay samples 390
+anomalous_samples 100 similar_samples 16639
+Num replay samples 16739
+anomalous_samples 40 similar_samples 359
+Num replay samples 399
+anomalous_samples 104 similar_samples 936
+Num replay samples 1040
+anomalous_samples 100 similar_samples 3947
+Num replay samples 4047
+anomalous_samples 112 similar_samples 1006
+Num replay samples 1118
+anomalous_samples 157 similar_samples 1405
+Num replay samples 1562
+anomalous_samples 61 similar_samples 543
+Num replay samples 604
+anomalous_samples 176 similar_samples 1585
+Num replay samples 1761
+all_current_X (6419, 2381) all_replay_X (177624, 2381)
+
+
+ all_X (184043, 2381) all_Y (184043,)
+
+=> F1Score 0.032 Precision 0.058
+=> F1Score 0.106 Precision 0.078
+=> F1Score 0.000 Precision 0.000
+=> F1Score 0.000 Precision 0.000
+=> F1Score 0.000 Precision 0.000
+[0.05848750405712431, 0.07755632582322357, 0.0, 0.0, 0.0] 0.027208765976069575
+anomalous_samples 169 similar_samples 1520
+Num replay samples 1689
+anomalous_samples 71 similar_samples 640
+Num replay samples 711
+anomalous_samples 148 similar_samples 1333
+Num replay samples 1481
+anomalous_samples 100 similar_samples 2618
+Num replay samples 2718
+anomalous_samples 100 similar_samples 3820
+Num replay samples 3920
+anomalous_samples 108 similar_samples 973
+Num replay samples 1081
+anomalous_samples 94 similar_samples 845
+Num replay samples 939
+anomalous_samples 100 similar_samples 3210
+Num replay samples 3310
+anomalous_samples 55 similar_samples 494
+Num replay samples 549
+anomalous_samples 46 similar_samples 408
+Num replay samples 454
+anomalous_samples 151 similar_samples 1357
+Num replay samples 1508
+anomalous_samples 54 similar_samples 485
+Num replay samples 539
+anomalous_samples 100 similar_samples 2407
+Num replay samples 2507
+anomalous_samples 68 similar_samples 610
+Num replay samples 678
+anomalous_samples 100 similar_samples 2540
+Num replay samples 2640
+anomalous_samples 44 similar_samples 397
+Num replay samples 441
+anomalous_samples 145 similar_samples 1299
+Num replay samples 1444
+anomalous_samples 100 similar_samples 1965
+Num replay samples 2065
+anomalous_samples 46 similar_samples 414
+Num replay samples 460
+anomalous_samples 100 similar_samples 3649
+Num replay samples 3749
+anomalous_samples 100 similar_samples 3970
+Num replay samples 4070
+anomalous_samples 107 similar_samples 962
+Num replay samples 1069
+anomalous_samples 177 similar_samples 1591
+Num replay samples 1768
+anomalous_samples 58 similar_samples 516
+Num replay samples 574
+anomalous_samples 100 similar_samples 19540
+Num replay samples 19640
+anomalous_samples 102 similar_samples 918
+Num replay samples 1020
+anomalous_samples 120 similar_samples 1072
+Num replay samples 1192
+anomalous_samples 161 similar_samples 1450
+Num replay samples 1611
+anomalous_samples 100 similar_samples 9892
+Num replay samples 9992
+anomalous_samples 41 similar_samples 365
+Num replay samples 406
+anomalous_samples 100 similar_samples 5826
+Num replay samples 5926
+anomalous_samples 80 similar_samples 718
+Num replay samples 798
+anomalous_samples 100 similar_samples 13510
+Num replay samples 13610
+anomalous_samples 52 similar_samples 462
+Num replay samples 514
+anomalous_samples 59 similar_samples 524
+Num replay samples 583
+anomalous_samples 66 similar_samples 594
+Num replay samples 660
+anomalous_samples 129 similar_samples 1159
+Num replay samples 1288
+anomalous_samples 100 similar_samples 6642
+Num replay samples 6742
+anomalous_samples 67 similar_samples 599
+Num replay samples 666
+anomalous_samples 82 similar_samples 733
+Num replay samples 815
+anomalous_samples 107 similar_samples 957
+Num replay samples 1064
+anomalous_samples 62 similar_samples 556
+Num replay samples 618
+anomalous_samples 92 similar_samples 828
+Num replay samples 920
+anomalous_samples 65 similar_samples 577
+Num replay samples 642
+anomalous_samples 43 similar_samples 388
+Num replay samples 431
+anomalous_samples 100 similar_samples 2737
+Num replay samples 2837
+anomalous_samples 100 similar_samples 10476
+Num replay samples 10576
+anomalous_samples 100 similar_samples 4194
+Num replay samples 4294
+anomalous_samples 136 similar_samples 1221
+Num replay samples 1357
+anomalous_samples 116 similar_samples 1039
+Num replay samples 1155
+anomalous_samples 156 similar_samples 1397
+Num replay samples 1553
+anomalous_samples 67 similar_samples 604
+Num replay samples 671
+anomalous_samples 100 similar_samples 15039
+Num replay samples 15139
+anomalous_samples 41 similar_samples 363
+Num replay samples 404
+anomalous_samples 144 similar_samples 1292
+Num replay samples 1436
+anomalous_samples 104 similar_samples 935
+Num replay samples 1039
+anomalous_samples 39 similar_samples 351
+Num replay samples 390
+anomalous_samples 100 similar_samples 16639
+Num replay samples 16739
+anomalous_samples 40 similar_samples 359
+Num replay samples 399
+anomalous_samples 104 similar_samples 936
+Num replay samples 1040
+anomalous_samples 100 similar_samples 3947
+Num replay samples 4047
+anomalous_samples 112 similar_samples 1006
+Num replay samples 1118
+anomalous_samples 157 similar_samples 1405
+Num replay samples 1562
+anomalous_samples 61 similar_samples 543
+Num replay samples 604
+anomalous_samples 176 similar_samples 1585
+Num replay samples 1761
+anomalous_samples 100 similar_samples 2522
+Num replay samples 2622
+anomalous_samples 40 similar_samples 356
+Num replay samples 396
+anomalous_samples 53 similar_samples 472
+Num replay samples 525
+anomalous_samples 53 similar_samples 475
+Num replay samples 528
+anomalous_samples 100 similar_samples 1950
+Num replay samples 2050
+all_current_X (9439, 2381) all_replay_X (183744, 2381)
+
+
+ all_X (193183, 2381) all_Y (193183,)
+
+=> F1Score 0.037 Precision 0.061
+=> F1Score 0.095 Precision 0.067
+=> F1Score 0.000 Precision 0.000
+=> F1Score 0.000 Precision 0.000
+=> F1Score 0.000 Precision 0.000
+=> F1Score 0.008 Precision 0.005
+[0.061148977604673804, 0.067157712305026, 0.0, 0.0, 0.0, 0.004911591355599214] 0.022203046877549832
+anomalous_samples 169 similar_samples 1520
+Num replay samples 1689
+anomalous_samples 71 similar_samples 640
+Num replay samples 711
+anomalous_samples 148 similar_samples 1333
+Num replay samples 1481
+anomalous_samples 100 similar_samples 2618
+Num replay samples 2718
+anomalous_samples 100 similar_samples 3820
+Num replay samples 3920
+anomalous_samples 108 similar_samples 973
+Num replay samples 1081
+anomalous_samples 94 similar_samples 845
+Num replay samples 939
+anomalous_samples 100 similar_samples 3210
+Num replay samples 3310
+anomalous_samples 55 similar_samples 494
+Num replay samples 549
+anomalous_samples 46 similar_samples 408
+Num replay samples 454
+anomalous_samples 151 similar_samples 1357
+Num replay samples 1508
+anomalous_samples 54 similar_samples 485
+Num replay samples 539
+anomalous_samples 100 similar_samples 2407
+Num replay samples 2507
+anomalous_samples 68 similar_samples 610
+Num replay samples 678
+anomalous_samples 100 similar_samples 2540
+Num replay samples 2640
+anomalous_samples 44 similar_samples 397
+Num replay samples 441
+anomalous_samples 145 similar_samples 1299
+Num replay samples 1444
+anomalous_samples 100 similar_samples 1965
+Num replay samples 2065
+anomalous_samples 46 similar_samples 414
+Num replay samples 460
+anomalous_samples 100 similar_samples 3649
+Num replay samples 3749
+anomalous_samples 100 similar_samples 3970
+Num replay samples 4070
+anomalous_samples 107 similar_samples 962
+Num replay samples 1069
+anomalous_samples 177 similar_samples 1591
+Num replay samples 1768
+anomalous_samples 58 similar_samples 516
+Num replay samples 574
+anomalous_samples 100 similar_samples 19540
+Num replay samples 19640
+anomalous_samples 102 similar_samples 918
+Num replay samples 1020
+anomalous_samples 120 similar_samples 1072
+Num replay samples 1192
+anomalous_samples 161 similar_samples 1450
+Num replay samples 1611
+anomalous_samples 100 similar_samples 9892
+Num replay samples 9992
+anomalous_samples 41 similar_samples 365
+Num replay samples 406
+anomalous_samples 100 similar_samples 5826
+Num replay samples 5926
+anomalous_samples 80 similar_samples 718
+Num replay samples 798
+anomalous_samples 100 similar_samples 13510
+Num replay samples 13610
+anomalous_samples 52 similar_samples 462
+Num replay samples 514
+anomalous_samples 59 similar_samples 524
+Num replay samples 583
+anomalous_samples 66 similar_samples 594
+Num replay samples 660
+anomalous_samples 129 similar_samples 1159
+Num replay samples 1288
+anomalous_samples 100 similar_samples 6642
+Num replay samples 6742
+anomalous_samples 67 similar_samples 599
+Num replay samples 666
+anomalous_samples 82 similar_samples 733
+Num replay samples 815
+anomalous_samples 107 similar_samples 957
+Num replay samples 1064
+anomalous_samples 62 similar_samples 556
+Num replay samples 618
+anomalous_samples 92 similar_samples 828
+Num replay samples 920
+anomalous_samples 65 similar_samples 577
+Num replay samples 642
+anomalous_samples 43 similar_samples 388
+Num replay samples 431
+anomalous_samples 100 similar_samples 2737
+Num replay samples 2837
+anomalous_samples 100 similar_samples 10476
+Num replay samples 10576
+anomalous_samples 100 similar_samples 4194
+Num replay samples 4294
+anomalous_samples 136 similar_samples 1221
+Num replay samples 1357
+anomalous_samples 116 similar_samples 1039
+Num replay samples 1155
+anomalous_samples 156 similar_samples 1397
+Num replay samples 1553
+anomalous_samples 67 similar_samples 604
+Num replay samples 671
+anomalous_samples 100 similar_samples 15039
+Num replay samples 15139
+anomalous_samples 41 similar_samples 363
+Num replay samples 404
+anomalous_samples 144 similar_samples 1292
+Num replay samples 1436
+anomalous_samples 104 similar_samples 935
+Num replay samples 1039
+anomalous_samples 39 similar_samples 351
+Num replay samples 390
+anomalous_samples 100 similar_samples 16639
+Num replay samples 16739
+anomalous_samples 40 similar_samples 359
+Num replay samples 399
+anomalous_samples 104 similar_samples 936
+Num replay samples 1040
+anomalous_samples 100 similar_samples 3947
+Num replay samples 4047
+anomalous_samples 112 similar_samples 1006
+Num replay samples 1118
+anomalous_samples 157 similar_samples 1405
+Num replay samples 1562
+anomalous_samples 61 similar_samples 543
+Num replay samples 604
+anomalous_samples 176 similar_samples 1585
+Num replay samples 1761
+anomalous_samples 100 similar_samples 2522
+Num replay samples 2622
+anomalous_samples 40 similar_samples 356
+Num replay samples 396
+anomalous_samples 53 similar_samples 472
+Num replay samples 525
+anomalous_samples 53 similar_samples 475
+Num replay samples 528
+anomalous_samples 100 similar_samples 1950
+Num replay samples 2050
+anomalous_samples 55 similar_samples 495
+Num replay samples 550
+anomalous_samples 100 similar_samples 3402
+Num replay samples 3502
+anomalous_samples 108 similar_samples 966
+Num replay samples 1074
+anomalous_samples 135 similar_samples 1210
+Num replay samples 1345
+anomalous_samples 100 similar_samples 2421
+Num replay samples 2521
+all_current_X (36828, 2381) all_replay_X (192736, 2381)
+
+
+ all_X (229564, 2381) all_Y (229564,)
+
+=> F1Score 0.123 Precision 0.137
+=> F1Score 0.106 Precision 0.086
+=> F1Score 0.019 Precision 0.010
+=> F1Score 0.000 Precision 0.000
+=> F1Score 0.195 Precision 0.195
+=> F1Score 0.006 Precision 0.004
+=> F1Score 0.000 Precision 0.000
+[0.13690360272638755, 0.08578856152512998, 0.009856262833675565, 0.0, 0.19482288828337874, 0.003929273084479371, 0.0] 0.06161436977900732
+anomalous_samples 169 similar_samples 1520
+Num replay samples 1689
+anomalous_samples 71 similar_samples 640
+Num replay samples 711
+anomalous_samples 148 similar_samples 1333
+Num replay samples 1481
+anomalous_samples 100 similar_samples 2618
+Num replay samples 2718
+anomalous_samples 100 similar_samples 3820
+Num replay samples 3920
+anomalous_samples 108 similar_samples 973
+Num replay samples 1081
+anomalous_samples 94 similar_samples 845
+Num replay samples 939
+anomalous_samples 100 similar_samples 3211
+Num replay samples 3311
+anomalous_samples 55 similar_samples 494
+Num replay samples 549
+anomalous_samples 46 similar_samples 408
+Num replay samples 454
+anomalous_samples 151 similar_samples 1357
+Num replay samples 1508
+anomalous_samples 54 similar_samples 485
+Num replay samples 539
+anomalous_samples 100 similar_samples 2407
+Num replay samples 2507
+anomalous_samples 68 similar_samples 610
+Num replay samples 678
+anomalous_samples 100 similar_samples 2540
+Num replay samples 2640
+anomalous_samples 44 similar_samples 397
+Num replay samples 441
+anomalous_samples 145 similar_samples 1299
+Num replay samples 1444
+anomalous_samples 100 similar_samples 1965
+Num replay samples 2065
+anomalous_samples 46 similar_samples 414
+Num replay samples 460
+anomalous_samples 100 similar_samples 3649
+Num replay samples 3749
+anomalous_samples 100 similar_samples 3970
+Num replay samples 4070
+anomalous_samples 107 similar_samples 962
+Num replay samples 1069
+anomalous_samples 177 similar_samples 1591
+Num replay samples 1768
+anomalous_samples 58 similar_samples 516
+Num replay samples 574
+anomalous_samples 100 similar_samples 19540
+Num replay samples 19640
+anomalous_samples 102 similar_samples 918
+Num replay samples 1020
+anomalous_samples 120 similar_samples 1072
+Num replay samples 1192
+anomalous_samples 161 similar_samples 1450
+Num replay samples 1611
+anomalous_samples 100 similar_samples 9892
+Num replay samples 9992
+anomalous_samples 41 similar_samples 365
+Num replay samples 406
+anomalous_samples 100 similar_samples 5826
+Num replay samples 5926
+anomalous_samples 80 similar_samples 718
+Num replay samples 798
+anomalous_samples 100 similar_samples 13510
+Num replay samples 13610
+anomalous_samples 52 similar_samples 462
+Num replay samples 514
+anomalous_samples 59 similar_samples 524
+Num replay samples 583
+anomalous_samples 66 similar_samples 594
+Num replay samples 660
+anomalous_samples 129 similar_samples 1159
+Num replay samples 1288
+anomalous_samples 100 similar_samples 6642
+Num replay samples 6742
+anomalous_samples 67 similar_samples 599
+Num replay samples 666
+anomalous_samples 82 similar_samples 733
+Num replay samples 815
+anomalous_samples 107 similar_samples 957
+Num replay samples 1064
+anomalous_samples 62 similar_samples 556
+Num replay samples 618
+anomalous_samples 92 similar_samples 828
+Num replay samples 920
+anomalous_samples 65 similar_samples 577
+Num replay samples 642
+anomalous_samples 43 similar_samples 388
+Num replay samples 431
+anomalous_samples 100 similar_samples 2737
+Num replay samples 2837
+anomalous_samples 100 similar_samples 10476
+Num replay samples 10576
+anomalous_samples 100 similar_samples 4194
+Num replay samples 4294
+anomalous_samples 136 similar_samples 1221
+Num replay samples 1357
+anomalous_samples 116 similar_samples 1039
+Num replay samples 1155
+anomalous_samples 156 similar_samples 1397
+Num replay samples 1553
+anomalous_samples 67 similar_samples 604
+Num replay samples 671
+anomalous_samples 100 similar_samples 15039
+Num replay samples 15139
+anomalous_samples 41 similar_samples 363
+Num replay samples 404
+anomalous_samples 144 similar_samples 1292
+Num replay samples 1436
+anomalous_samples 104 similar_samples 935
+Num replay samples 1039
+anomalous_samples 39 similar_samples 351
+Num replay samples 390
+anomalous_samples 100 similar_samples 16639
+Num replay samples 16739
+anomalous_samples 40 similar_samples 359
+Num replay samples 399
+anomalous_samples 104 similar_samples 936
+Num replay samples 1040
+anomalous_samples 100 similar_samples 3947
+Num replay samples 4047
+anomalous_samples 112 similar_samples 1006
+Num replay samples 1118
+anomalous_samples 157 similar_samples 1405
+Num replay samples 1562
+anomalous_samples 61 similar_samples 543
+Num replay samples 604
+anomalous_samples 176 similar_samples 1585
+Num replay samples 1761
+anomalous_samples 100 similar_samples 2522
+Num replay samples 2622
+anomalous_samples 40 similar_samples 356
+Num replay samples 396
+anomalous_samples 53 similar_samples 472
+Num replay samples 525
+anomalous_samples 53 similar_samples 475
+Num replay samples 528
+anomalous_samples 100 similar_samples 1950
+Num replay samples 2050
+anomalous_samples 55 similar_samples 495
+Num replay samples 550
+anomalous_samples 100 similar_samples 3402
+Num replay samples 3502
+anomalous_samples 108 similar_samples 966
+Num replay samples 1074
+anomalous_samples 135 similar_samples 1210
+Num replay samples 1345
+anomalous_samples 100 similar_samples 2421
+Num replay samples 2521
+anomalous_samples 138 similar_samples 1236
+Num replay samples 1374
+anomalous_samples 100 similar_samples 1805
+Num replay samples 1905
+anomalous_samples 57 similar_samples 514
+Num replay samples 571
+anomalous_samples 51 similar_samples 454
+Num replay samples 505
+anomalous_samples 100 similar_samples 29134
+Num replay samples 29234
+all_current_X (9991, 2381) all_replay_X (226326, 2381)
+
+
+ all_X (236317, 2381) all_Y (236317,)
+
+=> F1Score 0.182 Precision 0.202
+=> F1Score 0.109 Precision 0.094
+=> F1Score 0.027 Precision 0.014
+=> F1Score 0.000 Precision 0.000
+=> F1Score 0.194 Precision 0.199
+=> F1Score 0.005 Precision 0.003
+=> F1Score 0.000 Precision 0.000
+=> F1Score 0.004 Precision 0.002
+[0.2018175916910094, 0.09402079722703639, 0.014373716632443531, 0.0, 0.1989100817438692, 0.0029469548133595285, 0.0, 0.0018148820326678765] 0.06423550301754824
+anomalous_samples 169 similar_samples 1520
+Num replay samples 1689
+anomalous_samples 71 similar_samples 640
+Num replay samples 711
+anomalous_samples 148 similar_samples 1333
+Num replay samples 1481
+anomalous_samples 100 similar_samples 2618
+Num replay samples 2718
+anomalous_samples 100 similar_samples 3820
+Num replay samples 3920
+anomalous_samples 108 similar_samples 973
+Num replay samples 1081
+anomalous_samples 94 similar_samples 845
+Num replay samples 939
+anomalous_samples 100 similar_samples 3210
+Num replay samples 3310
+anomalous_samples 55 similar_samples 494
+Num replay samples 549
+anomalous_samples 46 similar_samples 408
+Num replay samples 454
+anomalous_samples 151 similar_samples 1357
+Num replay samples 1508
+anomalous_samples 54 similar_samples 485
+Num replay samples 539
+anomalous_samples 100 similar_samples 2407
+Num replay samples 2507
+anomalous_samples 68 similar_samples 610
+Num replay samples 678
+anomalous_samples 100 similar_samples 2540
+Num replay samples 2640
+anomalous_samples 44 similar_samples 397
+Num replay samples 441
+anomalous_samples 145 similar_samples 1299
+Num replay samples 1444
+anomalous_samples 100 similar_samples 1965
+Num replay samples 2065
+anomalous_samples 46 similar_samples 414
+Num replay samples 460
+anomalous_samples 100 similar_samples 3649
+Num replay samples 3749
+anomalous_samples 100 similar_samples 3970
+Num replay samples 4070
+anomalous_samples 107 similar_samples 962
+Num replay samples 1069
+anomalous_samples 177 similar_samples 1591
+Num replay samples 1768
+anomalous_samples 58 similar_samples 516
+Num replay samples 574
+anomalous_samples 100 similar_samples 19540
+Num replay samples 19640
+anomalous_samples 102 similar_samples 918
+Num replay samples 1020
+anomalous_samples 120 similar_samples 1072
+Num replay samples 1192
+anomalous_samples 161 similar_samples 1450
+Num replay samples 1611
+anomalous_samples 100 similar_samples 9892
+Num replay samples 9992
+anomalous_samples 41 similar_samples 365
+Num replay samples 406
+anomalous_samples 100 similar_samples 5826
+Num replay samples 5926
+anomalous_samples 80 similar_samples 718
+Num replay samples 798
+anomalous_samples 100 similar_samples 13510
+Num replay samples 13610
+anomalous_samples 52 similar_samples 462
+Num replay samples 514
+anomalous_samples 59 similar_samples 524
+Num replay samples 583
+anomalous_samples 66 similar_samples 594
+Num replay samples 660
+anomalous_samples 129 similar_samples 1159
+Num replay samples 1288
+anomalous_samples 100 similar_samples 6642
+Num replay samples 6742
+anomalous_samples 67 similar_samples 599
+Num replay samples 666
+anomalous_samples 82 similar_samples 733
+Num replay samples 815
+anomalous_samples 107 similar_samples 957
+Num replay samples 1064
+anomalous_samples 62 similar_samples 556
+Num replay samples 618
+anomalous_samples 92 similar_samples 828
+Num replay samples 920
+anomalous_samples 65 similar_samples 577
+Num replay samples 642
+anomalous_samples 43 similar_samples 388
+Num replay samples 431
+anomalous_samples 100 similar_samples 2737
+Num replay samples 2837
+anomalous_samples 100 similar_samples 10476
+Num replay samples 10576
+anomalous_samples 100 similar_samples 4194
+Num replay samples 4294
+anomalous_samples 136 similar_samples 1221
+Num replay samples 1357
+anomalous_samples 116 similar_samples 1039
+Num replay samples 1155
+anomalous_samples 156 similar_samples 1397
+Num replay samples 1553
+anomalous_samples 67 similar_samples 604
+Num replay samples 671
+anomalous_samples 100 similar_samples 15039
+Num replay samples 15139
+anomalous_samples 41 similar_samples 363
+Num replay samples 404
+anomalous_samples 144 similar_samples 1292
+Num replay samples 1436
+anomalous_samples 104 similar_samples 935
+Num replay samples 1039
+anomalous_samples 39 similar_samples 351
+Num replay samples 390
+anomalous_samples 100 similar_samples 16639
+Num replay samples 16739
+anomalous_samples 40 similar_samples 359
+Num replay samples 399
+anomalous_samples 104 similar_samples 936
+Num replay samples 1040
+anomalous_samples 100 similar_samples 3947
+Num replay samples 4047
+anomalous_samples 112 similar_samples 1006
+Num replay samples 1118
+anomalous_samples 157 similar_samples 1405
+Num replay samples 1562
+anomalous_samples 61 similar_samples 543
+Num replay samples 604
+anomalous_samples 176 similar_samples 1585
+Num replay samples 1761
+anomalous_samples 100 similar_samples 2522
+Num replay samples 2622
+anomalous_samples 40 similar_samples 356
+Num replay samples 396
+anomalous_samples 53 similar_samples 472
+Num replay samples 525
+anomalous_samples 53 similar_samples 475
+Num replay samples 528
+anomalous_samples 100 similar_samples 1950
+Num replay samples 2050
+anomalous_samples 55 similar_samples 495
+Num replay samples 550
+anomalous_samples 100 similar_samples 3402
+Num replay samples 3502
+anomalous_samples 108 similar_samples 966
+Num replay samples 1074
+anomalous_samples 135 similar_samples 1210
+Num replay samples 1345
+anomalous_samples 100 similar_samples 2422
+Num replay samples 2522
+anomalous_samples 138 similar_samples 1236
+Num replay samples 1374
+anomalous_samples 100 similar_samples 1805
+Num replay samples 1905
+anomalous_samples 57 similar_samples 514
+Num replay samples 571
+anomalous_samples 51 similar_samples 454
+Num replay samples 505
+anomalous_samples 100 similar_samples 29141
+Num replay samples 29241
+anomalous_samples 47 similar_samples 423
+Num replay samples 470
+anomalous_samples 100 similar_samples 5166
+Num replay samples 5266
+anomalous_samples 81 similar_samples 727
+Num replay samples 808
+anomalous_samples 100 similar_samples 2253
+Num replay samples 2353
+anomalous_samples 47 similar_samples 422
+Num replay samples 469
+all_current_X (3204, 2381) all_replay_X (235699, 2381)
+
+
+ all_X (238903, 2381) all_Y (238903,)
+
+=> F1Score 0.218 Precision 0.236
+=> F1Score 0.111 Precision 0.105
+=> F1Score 0.035 Precision 0.019
+=> F1Score 0.000 Precision 0.000
+=> F1Score 0.197 Precision 0.203
+=> F1Score 0.004 Precision 0.002
+=> F1Score 0.000 Precision 0.000
+=> F1Score 0.005 Precision 0.003
+=> F1Score 0.039 Precision 0.034
+[0.2355728659526128, 0.1048526863084922, 0.019301848049281315, 0.0, 0.20299727520435967, 0.0019646365422396855, 0.0, 0.0027223230490018148, 0.03367875647668394] 0.06678782128696349
+anomalous_samples 169 similar_samples 1520
+Num replay samples 1689
+anomalous_samples 71 similar_samples 640
+Num replay samples 711
+anomalous_samples 148 similar_samples 1333
+Num replay samples 1481
+anomalous_samples 100 similar_samples 2618
+Num replay samples 2718
+anomalous_samples 100 similar_samples 3820
+Num replay samples 3920
+anomalous_samples 108 similar_samples 973
+Num replay samples 1081
+anomalous_samples 94 similar_samples 845
+Num replay samples 939
+anomalous_samples 100 similar_samples 3210
+Num replay samples 3310
+anomalous_samples 55 similar_samples 494
+Num replay samples 549
+anomalous_samples 46 similar_samples 408
+Num replay samples 454
+anomalous_samples 151 similar_samples 1357
+Num replay samples 1508
+anomalous_samples 54 similar_samples 485
+Num replay samples 539
+anomalous_samples 100 similar_samples 2407
+Num replay samples 2507
+anomalous_samples 68 similar_samples 610
+Num replay samples 678
+anomalous_samples 100 similar_samples 2540
+Num replay samples 2640
+anomalous_samples 44 similar_samples 397
+Num replay samples 441
+anomalous_samples 145 similar_samples 1299
+Num replay samples 1444
+anomalous_samples 100 similar_samples 1965
+Num replay samples 2065
+anomalous_samples 46 similar_samples 414
+Num replay samples 460
+anomalous_samples 100 similar_samples 3649
+Num replay samples 3749
+anomalous_samples 100 similar_samples 3970
+Num replay samples 4070
+anomalous_samples 107 similar_samples 962
+Num replay samples 1069
+anomalous_samples 177 similar_samples 1591
+Num replay samples 1768
+anomalous_samples 58 similar_samples 516
+Num replay samples 574
+anomalous_samples 100 similar_samples 19540
+Num replay samples 19640
+anomalous_samples 102 similar_samples 918
+Num replay samples 1020
+anomalous_samples 120 similar_samples 1072
+Num replay samples 1192
+anomalous_samples 161 similar_samples 1450
+Num replay samples 1611
+anomalous_samples 100 similar_samples 9892
+Num replay samples 9992
+anomalous_samples 41 similar_samples 365
+Num replay samples 406
+anomalous_samples 100 similar_samples 5826
+Num replay samples 5926
+anomalous_samples 80 similar_samples 718
+Num replay samples 798
+anomalous_samples 100 similar_samples 13510
+Num replay samples 13610
+anomalous_samples 52 similar_samples 462
+Num replay samples 514
+anomalous_samples 58 similar_samples 525
+Num replay samples 583
+anomalous_samples 66 similar_samples 594
+Num replay samples 660
+anomalous_samples 129 similar_samples 1159
+Num replay samples 1288
+anomalous_samples 100 similar_samples 6642
+Num replay samples 6742
+anomalous_samples 67 similar_samples 599
+Num replay samples 666
+anomalous_samples 82 similar_samples 733
+Num replay samples 815
+anomalous_samples 107 similar_samples 957
+Num replay samples 1064
+anomalous_samples 62 similar_samples 556
+Num replay samples 618
+anomalous_samples 92 similar_samples 828
+Num replay samples 920
+anomalous_samples 65 similar_samples 577
+Num replay samples 642
+anomalous_samples 43 similar_samples 388
+Num replay samples 431
+anomalous_samples 100 similar_samples 2737
+Num replay samples 2837
+anomalous_samples 100 similar_samples 10476
+Num replay samples 10576
+anomalous_samples 100 similar_samples 4194
+Num replay samples 4294
+anomalous_samples 136 similar_samples 1221
+Num replay samples 1357
+anomalous_samples 116 similar_samples 1039
+Num replay samples 1155
+anomalous_samples 156 similar_samples 1397
+Num replay samples 1553
+anomalous_samples 67 similar_samples 604
+Num replay samples 671
+anomalous_samples 100 similar_samples 15039
+Num replay samples 15139
+anomalous_samples 41 similar_samples 363
+Num replay samples 404
+anomalous_samples 144 similar_samples 1292
+Num replay samples 1436
+anomalous_samples 104 similar_samples 935
+Num replay samples 1039
+anomalous_samples 39 similar_samples 351
+Num replay samples 390
+anomalous_samples 100 similar_samples 16639
+Num replay samples 16739
+anomalous_samples 40 similar_samples 359
+Num replay samples 399
+anomalous_samples 104 similar_samples 936
+Num replay samples 1040
+anomalous_samples 100 similar_samples 3947
+Num replay samples 4047
+anomalous_samples 112 similar_samples 1006
+Num replay samples 1118
+anomalous_samples 157 similar_samples 1405
+Num replay samples 1562
+anomalous_samples 61 similar_samples 543
+Num replay samples 604
+anomalous_samples 176 similar_samples 1585
+Num replay samples 1761
+anomalous_samples 100 similar_samples 2522
+Num replay samples 2622
+anomalous_samples 40 similar_samples 356
+Num replay samples 396
+anomalous_samples 53 similar_samples 472
+Num replay samples 525
+anomalous_samples 53 similar_samples 475
+Num replay samples 528
+anomalous_samples 100 similar_samples 1950
+Num replay samples 2050
+anomalous_samples 55 similar_samples 495
+Num replay samples 550
+anomalous_samples 100 similar_samples 3402
+Num replay samples 3502
+anomalous_samples 108 similar_samples 966
+Num replay samples 1074
+anomalous_samples 135 similar_samples 1210
+Num replay samples 1345
+anomalous_samples 100 similar_samples 2421
+Num replay samples 2521
+anomalous_samples 138 similar_samples 1236
+Num replay samples 1374
+anomalous_samples 100 similar_samples 1805
+Num replay samples 1905
+anomalous_samples 57 similar_samples 514
+Num replay samples 571
+anomalous_samples 51 similar_samples 454
+Num replay samples 505
+anomalous_samples 100 similar_samples 29134
+Num replay samples 29234
+anomalous_samples 47 similar_samples 423
+Num replay samples 470
+anomalous_samples 100 similar_samples 5166
+Num replay samples 5266
+anomalous_samples 80 similar_samples 728
+Num replay samples 808
+anomalous_samples 100 similar_samples 2253
+Num replay samples 2353
+anomalous_samples 47 similar_samples 422
+Num replay samples 469
+anomalous_samples 42 similar_samples 379
+Num replay samples 421
+anomalous_samples 87 similar_samples 784
+Num replay samples 871
+anomalous_samples 50 similar_samples 450
+Num replay samples 500
+anomalous_samples 54 similar_samples 487
+Num replay samples 541
+anomalous_samples 87 similar_samples 784
+Num replay samples 871
+all_current_X (19512, 2381) all_replay_X (238895, 2381)
+
+
+ all_X (258407, 2381) all_Y (258407,)
+
+=> F1Score 0.269 Precision 0.278
+=> F1Score 0.125 Precision 0.114
+=> F1Score 0.043 Precision 0.025
+=> F1Score 0.000 Precision 0.000
+=> F1Score 0.257 Precision 0.237
+=> F1Score 0.007 Precision 0.004
+=> F1Score 0.000 Precision 0.000
+=> F1Score 0.005 Precision 0.003
+=> F1Score 0.048 Precision 0.047
+=> F1Score 0.000 Precision 0.000
+[0.277766958779617, 0.11395147313691507, 0.02505133470225873, 0.0, 0.23705722070844687, 0.003929273084479371, 0.0, 0.0027223230490018148, 0.046632124352331605, 0.0] 0.07071107078130505
+anomalous_samples 169 similar_samples 1520
+Num replay samples 1689
+anomalous_samples 71 similar_samples 640
+Num replay samples 711
+anomalous_samples 148 similar_samples 1333
+Num replay samples 1481
+anomalous_samples 100 similar_samples 2618
+Num replay samples 2718
+anomalous_samples 100 similar_samples 3820
+Num replay samples 3920
+anomalous_samples 108 similar_samples 973
+Num replay samples 1081
+anomalous_samples 94 similar_samples 845
+Num replay samples 939
+anomalous_samples 100 similar_samples 3210
+Num replay samples 3310
+anomalous_samples 55 similar_samples 494
+Num replay samples 549
+anomalous_samples 46 similar_samples 408
+Num replay samples 454
+anomalous_samples 151 similar_samples 1357
+Num replay samples 1508
+anomalous_samples 54 similar_samples 485
+Num replay samples 539
+anomalous_samples 100 similar_samples 2407
+Num replay samples 2507
+anomalous_samples 68 similar_samples 610
+Num replay samples 678
+anomalous_samples 100 similar_samples 2540
+Num replay samples 2640
+anomalous_samples 44 similar_samples 397
+Num replay samples 441
+anomalous_samples 145 similar_samples 1299
+Num replay samples 1444
+anomalous_samples 100 similar_samples 1965
+Num replay samples 2065
+anomalous_samples 46 similar_samples 414
+Num replay samples 460
+anomalous_samples 100 similar_samples 3649
+Num replay samples 3749
+anomalous_samples 100 similar_samples 3970
+Num replay samples 4070
+anomalous_samples 107 similar_samples 962
+Num replay samples 1069
+anomalous_samples 177 similar_samples 1591
+Num replay samples 1768
+anomalous_samples 58 similar_samples 516
+Num replay samples 574
+anomalous_samples 100 similar_samples 19540
+Num replay samples 19640
+anomalous_samples 102 similar_samples 918
+Num replay samples 1020
+anomalous_samples 120 similar_samples 1072
+Num replay samples 1192
+anomalous_samples 161 similar_samples 1450
+Num replay samples 1611
+anomalous_samples 100 similar_samples 9892
+Num replay samples 9992
+anomalous_samples 41 similar_samples 365
+Num replay samples 406
+anomalous_samples 100 similar_samples 5826
+Num replay samples 5926
+anomalous_samples 80 similar_samples 718
+Num replay samples 798
+anomalous_samples 100 similar_samples 13510
+Num replay samples 13610
+anomalous_samples 52 similar_samples 462
+Num replay samples 514
+anomalous_samples 59 similar_samples 524
+Num replay samples 583
+anomalous_samples 66 similar_samples 594
+Num replay samples 660
+anomalous_samples 129 similar_samples 1159
+Num replay samples 1288
+anomalous_samples 100 similar_samples 6643
+Num replay samples 6743
+anomalous_samples 67 similar_samples 599
+Num replay samples 666
+anomalous_samples 82 similar_samples 733
+Num replay samples 815
+anomalous_samples 107 similar_samples 957
+Num replay samples 1064
+anomalous_samples 62 similar_samples 556
+Num replay samples 618
+anomalous_samples 92 similar_samples 828
+Num replay samples 920
+anomalous_samples 65 similar_samples 577
+Num replay samples 642
+anomalous_samples 43 similar_samples 388
+Num replay samples 431
+anomalous_samples 100 similar_samples 2737
+Num replay samples 2837
+anomalous_samples 100 similar_samples 10476
+Num replay samples 10576
+anomalous_samples 100 similar_samples 4194
+Num replay samples 4294
+anomalous_samples 136 similar_samples 1221
+Num replay samples 1357
+anomalous_samples 116 similar_samples 1039
+Num replay samples 1155
+anomalous_samples 156 similar_samples 1397
+Num replay samples 1553
+anomalous_samples 67 similar_samples 604
+Num replay samples 671
+anomalous_samples 100 similar_samples 15039
+Num replay samples 15139
+anomalous_samples 41 similar_samples 363
+Num replay samples 404
+anomalous_samples 144 similar_samples 1292
+Num replay samples 1436
+anomalous_samples 104 similar_samples 935
+Num replay samples 1039
+anomalous_samples 39 similar_samples 351
+Num replay samples 390
+anomalous_samples 100 similar_samples 16639
+Num replay samples 16739
+anomalous_samples 40 similar_samples 359
+Num replay samples 399
+anomalous_samples 104 similar_samples 936
+Num replay samples 1040
+anomalous_samples 100 similar_samples 3947
+Num replay samples 4047
+anomalous_samples 112 similar_samples 1006
+Num replay samples 1118
+anomalous_samples 157 similar_samples 1405
+Num replay samples 1562
+anomalous_samples 61 similar_samples 543
+Num replay samples 604
+anomalous_samples 176 similar_samples 1585
+Num replay samples 1761
+anomalous_samples 100 similar_samples 2522
+Num replay samples 2622
+anomalous_samples 40 similar_samples 356
+Num replay samples 396
+anomalous_samples 53 similar_samples 472
+Num replay samples 525
+anomalous_samples 53 similar_samples 475
+Num replay samples 528
+anomalous_samples 100 similar_samples 1950
+Num replay samples 2050
+anomalous_samples 55 similar_samples 495
+Num replay samples 550
+anomalous_samples 100 similar_samples 3402
+Num replay samples 3502
+anomalous_samples 108 similar_samples 966
+Num replay samples 1074
+anomalous_samples 135 similar_samples 1210
+Num replay samples 1345
+anomalous_samples 100 similar_samples 2421
+Num replay samples 2521
+anomalous_samples 138 similar_samples 1236
+Num replay samples 1374
+anomalous_samples 100 similar_samples 1805
+Num replay samples 1905
+anomalous_samples 57 similar_samples 514
+Num replay samples 571
+anomalous_samples 51 similar_samples 454
+Num replay samples 505
+anomalous_samples 100 similar_samples 29143
+Num replay samples 29243
+anomalous_samples 47 similar_samples 423
+Num replay samples 470
+anomalous_samples 100 similar_samples 5166
+Num replay samples 5266
+anomalous_samples 81 similar_samples 727
+Num replay samples 808
+anomalous_samples 100 similar_samples 2253
+Num replay samples 2353
+anomalous_samples 47 similar_samples 422
+Num replay samples 469
+anomalous_samples 42 similar_samples 379
+Num replay samples 421
+anomalous_samples 87 similar_samples 784
+Num replay samples 871
+anomalous_samples 50 similar_samples 450
+Num replay samples 500
+anomalous_samples 54 similar_samples 487
+Num replay samples 541
+anomalous_samples 87 similar_samples 784
+Num replay samples 871
+anomalous_samples 114 similar_samples 1026
+Num replay samples 1140
+anomalous_samples 156 similar_samples 1397
+Num replay samples 1553
+anomalous_samples 100 similar_samples 3208
+Num replay samples 3308
+anomalous_samples 100 similar_samples 11431
+Num replay samples 11531
+anomalous_samples 56 similar_samples 497
+Num replay samples 553
+all_current_X (27471, 2381) all_replay_X (256990, 2381)
+
+
+ all_X (284461, 2381) all_Y (284461,)
+
+=> F1Score 0.308 Precision 0.313
+=> F1Score 0.123 Precision 0.115
+=> F1Score 0.054 Precision 0.032
+=> F1Score 0.000 Precision 0.000
+=> F1Score 0.255 Precision 0.233
+=> F1Score 0.028 Precision 0.015
+=> F1Score 0.000 Precision 0.000
+=> F1Score 0.007 Precision 0.004
+=> F1Score 0.070 Precision 0.057
+=> F1Score 0.000 Precision 0.000
+=> F1Score 0.000 Precision 0.000
+[0.3134047387211944, 0.11481802426343155, 0.03162217659137577, 0.0, 0.2329700272479564, 0.014734774066797643, 0.0, 0.003629764065335753, 0.05699481865284974, 0.0, 0.0] 0.06983402941899465
+all_task_accuracies [0.027198961376176566, 0.016900306400778067, 0.038168591117058746, 0.029562802315528113, 0.027208765976069575, 0.022203046877549832, 0.06161436977900732, 0.06423550301754824, 0.06678782128696349, 0.07071107078130505, 0.06983402941899465]
+metrics_dict average [0.027263875365141188, 0.012323870178772225, 0.035946402645610685, 0.025994719691382923, 0.031151312033219757, 0.06261721824901066, 0.06322631035728304, 0.05964578309084096, 0.06622305752023219, 0.0642967966124044, 0.06403453391481288] Mean 0.046611261787155536
+
+
+EVALUATION RESULTS:
+=> F1Score 0.289 Precision 0.298
+=> F1Score 0.135 Precision 0.116
+=> F1Score 0.049 Precision 0.028
+=> F1Score 0.000 Precision 0.000
+=> F1Score 0.255 Precision 0.255
+=> F1Score 0.050 Precision 0.028
+=> F1Score 0.000 Precision 0.000
+=> F1Score 0.012 Precision 0.006
+=> F1Score 0.022 Precision 0.018
+=> F1Score 0.003 Precision 0.001
+=> F1Score 0.001 Precision 0.001
+Accuracy matrix, based on only classes in that task ('as if Task-IL scenario')
+                 task 1    task 2    task 3    task 4    task 5  ...    task 7    task 8    task 9   task 10   task 11
+at start       0.028043  0.231802  0.200821  0.216463  0.219346  ...  0.206341  0.145191  0.204663  0.191578  0.183328
+after task 1   0.028562  0.224003  0.184394  0.220528  0.205722  ...  0.201951  0.205989  0.209845  0.206386  0.149788
+after task 2   0.020188  0.200173  0.211499  0.215447  0.217984  ...  0.195122  0.208711  0.181347  0.196668  0.082058
+after task 3   0.045635  0.211872  0.229979  0.156504  0.223433  ...  0.194390  0.191470  0.238342  0.209162  0.066428
+after task 4   0.045699  0.202773  0.227926  0.083333  0.215259  ...  0.014146  0.196915  0.240933  0.190190  0.096386
+after task 5   0.073093  0.216205  0.255852  0.179878  0.213896  ...  0.047073  0.177858  0.186528  0.204535  0.113644
+after task 6   0.087179  0.233536  0.238604  0.209350  0.211172  ...  0.065366  0.169691  0.209845  0.230912  0.127320
+after task 7   0.132554  0.223137  0.242710  0.200203  0.276567  ...  0.098780  0.147005  0.215026  0.267469  0.115598
+after task 8   0.186563  0.223570  0.247639  0.064024  0.256131  ...  0.105854  0.157895  0.186528  0.277186  0.172257
+after task 9   0.226160  0.227036  0.253799  0.063008  0.275204  ...  0.126341  0.163339  0.178756  0.263304  0.215891
+after task 10  0.288802  0.255199  0.279261  0.092480  0.341962  ...  0.152927  0.156987  0.279793  0.264230  0.203191
+after task 11  0.338526  0.285095  0.282136  0.300813  0.354223  ...  0.154390  0.176044  0.240933  0.285053  0.188864
+
+[12 rows x 11 columns]
+
+Accuracy matrix, always based on all classes
+                 task 1    task 2    task 3    task 4    task 5  ...    task 7    task 8    task 9   task 10   task 11
+at start       0.028043  0.231802  0.200821  0.216463  0.219346  ...  0.206341  0.145191  0.204663  0.191578  0.183328
+after task 1   0.027783  0.001733  0.000000  0.000000  0.000000  ...  0.000000  0.006352  0.000000  0.000000  0.002279
+after task 2   0.022460  0.001300  0.000000  0.000000  0.000000  ...  0.000000  0.000907  0.000000  0.000000  0.000977
+after task 3   0.038040  0.072357  0.000000  0.000000  0.000000  ...  0.000000  0.000907  0.005181  0.000000  0.000326
+after task 4   0.045310  0.071924  0.000000  0.000000  0.000000  ...  0.000000  0.002722  0.002591  0.000000  0.000651
+after task 5   0.056021  0.077990  0.000000  0.000000  0.000000  ...  0.000000  0.000907  0.007772  0.000000  0.000000
+after task 6   0.063875  0.073657  0.005339  0.000000  0.006812  ...  0.000000  0.000000  0.005181  0.000000  0.000326
+after task 7   0.103148  0.079723  0.013142  0.000000  0.217984  ...  0.000000  0.002722  0.002591  0.000000  0.000977
+after task 8   0.170075  0.071057  0.009856  0.000000  0.192098  ...  0.000000  0.005445  0.007772  0.000000  0.000326
+after task 9   0.204609  0.103986  0.024641  0.000000  0.208447  ...  0.000000  0.002722  0.033679  0.000000  0.000000
+after task 10  0.243427  0.098787  0.033265  0.000000  0.211172  ...  0.000000  0.003630  0.020725  0.000000  0.000326
+after task 11  0.299189  0.117418  0.023409  0.000000  0.216621  ...  0.000000  0.000907  0.031088  0.003702  0.000326
+
+[12 rows x 11 columns]
+
+Accuracy matrix, based on all classes up to the trained task
+                 task 1    task 2    task 3  task 4    task 5    task 6  task 7    task 8    task 9   task 10  task 11
+after task 1   0.027264  0.000000  0.000000     0.0  0.000000  0.000000     0.0  0.000000  0.000000  0.000000      0.0
+after task 2   0.022915  0.001733  0.000000     0.0  0.000000  0.000000     0.0  0.000000  0.000000  0.000000      0.0
+after task 3   0.038948  0.068891  0.000000     0.0  0.000000  0.000000     0.0  0.000000  0.000000  0.000000      0.0
+after task 4   0.042454  0.061525  0.000000     0.0  0.000000  0.000000     0.0  0.000000  0.000000  0.000000      0.0
+after task 5   0.077767  0.077990  0.000000     0.0  0.000000  0.000000     0.0  0.000000  0.000000  0.000000      0.0
+after task 6   0.087309  0.075390  0.002464     0.0  0.194823  0.015717     0.0  0.000000  0.000000  0.000000      0.0
+after task 7   0.122428  0.074957  0.011499     0.0  0.217984  0.015717     0.0  0.000000  0.000000  0.000000      0.0
+after task 8   0.182798  0.081023  0.010678     0.0  0.185286  0.013752     0.0  0.003630  0.000000  0.000000      0.0
+after task 9   0.208763  0.103986  0.027515     0.0  0.235695  0.014735     0.0  0.002722  0.002591  0.000000      0.0
+after task 10  0.249335  0.113518  0.022998     0.0  0.223433  0.011788     0.0  0.006352  0.015544  0.000000      0.0
+after task 11  0.297566  0.110919  0.023819     0.0  0.213896  0.021611     0.0  0.003630  0.031088  0.001851      0.0
+
+Accuracy matrix, based on all classes up to the evaluated task
+                  task 1    task 2    task 3    task 4    task 5  ...    task 7    task 8    task 9   task 10   task 11
+at start        0.028043  0.231802  0.200821  0.216463  0.219346  ...  0.206341  0.145191  0.204663  0.191578  0.183328
+after task 1    0.029406  0.000867  0.000000  0.000000  0.000000  ...  0.000000  0.007260  0.000000  0.000000  0.003256
+after task 2    0.022006  0.001733  0.000000  0.000000  0.000000  ...  0.000000  0.000000  0.000000  0.000000  0.000651
+after task 3    0.042908  0.071490  0.000000  0.000000  0.000000  ...  0.000000  0.000907  0.005181  0.000000  0.001303
+after task 4    0.044791  0.077556  0.000000  0.000000  0.000000  ...  0.000000  0.001815  0.007772  0.000000       0.0
+after task 5    0.073483  0.076256  0.000000  0.000000  0.000000  ...  0.000000  0.003630  0.002591  0.000000       0.0
+after task 6     0.08666  0.081889  0.002875  0.000000  0.171662  ...  0.000000  0.002722  0.005181  0.000000       0.0
+after task 7    0.134437  0.071057  0.014374  0.000000  0.182561  ...  0.000000  0.002722  0.000000  0.000000  0.000326
+after task 8    0.188835  0.078423  0.011910  0.000000  0.201635  ...  0.000000  0.002722  0.012953  0.000000  0.000326
+after task 9    0.229341  0.097054  0.025051  0.000000  0.235695  ...  0.000000  0.001815  0.005181  0.000000  0.001954
+after task 10    0.27939  0.111352  0.025873  0.000000  0.245232  ...  0.000000  0.004537  0.010363  0.000000       0.0
+after task 11   0.334372  0.130849  0.028747  0.000000  0.246594  ...  0.000000  0.004537  0.028497  0.004165  0.000326
+FWT (per task)        NA -0.230936 -0.200821 -0.216463 -0.219346  ... -0.206341 -0.142468 -0.191710 -0.191578 -0.183328
+BWT (per task)  0.304966  0.129116  0.028747  0.000000  0.246594  ...  0.000000  0.001815  0.023316  0.004165        NA
+F (per task)   -0.054982 -0.019497 -0.002875  0.000000 -0.001362  ...  0.000000  0.002722 -0.015544 -0.004165        NA
+
+[15 rows x 11 columns]
+
+=> FWT = -0.1975
+=> BWT = 0.0750
+=>  F = -0.0100
+
+[0.027263875365141188, 0.012323870178772225, 0.035946402645610685, 0.025994719691382923, 0.031151312033219757, 0.06261721824901066, 0.06322631035728304, 0.05964578309084096, 0.06622305752023219, 0.0642967966124044, 0.06403453391481288]

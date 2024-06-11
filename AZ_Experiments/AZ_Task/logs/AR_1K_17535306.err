@@ -1,0 +1,65 @@
+  0%|                                                                                           | 0/10000 [00:00<?, ?it/s]  0%|                                                                                           | 0/10000 [01:24<?, ?it/s]
+Traceback (most recent call last):
+  File "main.py", line 324, in <module>
+    run(args, verbose=True)
+  File "main.py", line 313, in run
+    metric_cbs=metric_cbs, use_exemplars=args.use_exemplars, add_exemplars=args.add_exemplars,
+  File "/home/mr6564/continual_research/Project_2_CL_Malware/CL-IFSAWS-Malware/AZ_Task/train_diversity.py", line 991, in train_cl
+    model_new.load_state_dict(torch.load(model_path)) 
+  File "/home/mr6564/anaconda/envs/PyTorch/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1045, in load_state_dict
+    self.__class__.__name__, "\n\t".join(error_msgs)))
+RuntimeError: Error(s) in loading state_dict for Classifier:
+	Unexpected key(s) in state_dict: "fcE.fc0.weight", "fcE.fc0.bias", "fcE.fc0_bn.weight", "fcE.fc0_bn.bias", "fcE.fc0_bn.running_mean", "fcE.fc0_bn.running_var", "fcE.fc0_bn.num_batches_tracked". 
+	size mismatch for fcE.fc1.weight: copying a param with shape torch.Size([1024, 2048]) from checkpoint, the shape in current model is torch.Size([1024, 2381]).
+  0%|                                                                                           | 0/10000 [00:00<?, ?it/s]  0%|                                                                                           | 0/10000 [01:27<?, ?it/s]
+Traceback (most recent call last):
+  File "main.py", line 324, in <module>
+    run(args, verbose=True)
+  File "main.py", line 313, in run
+    metric_cbs=metric_cbs, use_exemplars=args.use_exemplars, add_exemplars=args.add_exemplars,
+  File "/home/mr6564/continual_research/Project_2_CL_Malware/CL-IFSAWS-Malware/AZ_Task/train_diversity.py", line 991, in train_cl
+    model_new.load_state_dict(torch.load(model_path)) 
+  File "/home/mr6564/anaconda/envs/PyTorch/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1045, in load_state_dict
+    self.__class__.__name__, "\n\t".join(error_msgs)))
+RuntimeError: Error(s) in loading state_dict for Classifier:
+	Unexpected key(s) in state_dict: "fcE.fc0.weight", "fcE.fc0.bias", "fcE.fc0_bn.weight", "fcE.fc0_bn.bias", "fcE.fc0_bn.running_mean", "fcE.fc0_bn.running_var", "fcE.fc0_bn.num_batches_tracked". 
+	size mismatch for fcE.fc1.weight: copying a param with shape torch.Size([1024, 2048]) from checkpoint, the shape in current model is torch.Size([1024, 2381]).
+  0%|                                                                                           | 0/10000 [00:00<?, ?it/s]  0%|                                                                                           | 0/10000 [01:26<?, ?it/s]
+Traceback (most recent call last):
+  File "main.py", line 324, in <module>
+    run(args, verbose=True)
+  File "main.py", line 313, in run
+    metric_cbs=metric_cbs, use_exemplars=args.use_exemplars, add_exemplars=args.add_exemplars,
+  File "/home/mr6564/continual_research/Project_2_CL_Malware/CL-IFSAWS-Malware/AZ_Task/train_diversity.py", line 991, in train_cl
+    model_new.load_state_dict(torch.load(model_path)) 
+  File "/home/mr6564/anaconda/envs/PyTorch/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1045, in load_state_dict
+    self.__class__.__name__, "\n\t".join(error_msgs)))
+RuntimeError: Error(s) in loading state_dict for Classifier:
+	Unexpected key(s) in state_dict: "fcE.fc0.weight", "fcE.fc0.bias", "fcE.fc0_bn.weight", "fcE.fc0_bn.bias", "fcE.fc0_bn.running_mean", "fcE.fc0_bn.running_var", "fcE.fc0_bn.num_batches_tracked". 
+	size mismatch for fcE.fc1.weight: copying a param with shape torch.Size([1024, 2048]) from checkpoint, the shape in current model is torch.Size([1024, 2381]).
+  0%|                                                                                           | 0/10000 [00:00<?, ?it/s]  0%|                                                                                           | 0/10000 [01:25<?, ?it/s]
+Traceback (most recent call last):
+  File "main.py", line 324, in <module>
+    run(args, verbose=True)
+  File "main.py", line 313, in run
+    metric_cbs=metric_cbs, use_exemplars=args.use_exemplars, add_exemplars=args.add_exemplars,
+  File "/home/mr6564/continual_research/Project_2_CL_Malware/CL-IFSAWS-Malware/AZ_Task/train_diversity.py", line 991, in train_cl
+    model_new.load_state_dict(torch.load(model_path)) 
+  File "/home/mr6564/anaconda/envs/PyTorch/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1045, in load_state_dict
+    self.__class__.__name__, "\n\t".join(error_msgs)))
+RuntimeError: Error(s) in loading state_dict for Classifier:
+	Unexpected key(s) in state_dict: "fcE.fc0.weight", "fcE.fc0.bias", "fcE.fc0_bn.weight", "fcE.fc0_bn.bias", "fcE.fc0_bn.running_mean", "fcE.fc0_bn.running_var", "fcE.fc0_bn.num_batches_tracked". 
+	size mismatch for fcE.fc1.weight: copying a param with shape torch.Size([1024, 2048]) from checkpoint, the shape in current model is torch.Size([1024, 2381]).
+  0%|                                                                                           | 0/10000 [00:00<?, ?it/s]  0%|                                                                                           | 0/10000 [01:25<?, ?it/s]
+Traceback (most recent call last):
+  File "main.py", line 324, in <module>
+    run(args, verbose=True)
+  File "main.py", line 313, in run
+    metric_cbs=metric_cbs, use_exemplars=args.use_exemplars, add_exemplars=args.add_exemplars,
+  File "/home/mr6564/continual_research/Project_2_CL_Malware/CL-IFSAWS-Malware/AZ_Task/train_diversity.py", line 991, in train_cl
+    model_new.load_state_dict(torch.load(model_path)) 
+  File "/home/mr6564/anaconda/envs/PyTorch/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1045, in load_state_dict
+    self.__class__.__name__, "\n\t".join(error_msgs)))
+RuntimeError: Error(s) in loading state_dict for Classifier:
+	Unexpected key(s) in state_dict: "fcE.fc0.weight", "fcE.fc0.bias", "fcE.fc0_bn.weight", "fcE.fc0_bn.bias", "fcE.fc0_bn.running_mean", "fcE.fc0_bn.running_var", "fcE.fc0_bn.num_batches_tracked". 
+	size mismatch for fcE.fc1.weight: copying a param with shape torch.Size([1024, 2048]) from checkpoint, the shape in current model is torch.Size([1024, 2381]).
