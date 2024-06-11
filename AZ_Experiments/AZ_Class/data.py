@@ -8,17 +8,6 @@ from sklearn.preprocessing import StandardScaler
 
 
 
-# save_path = '/home/mr6564/continual_research/AZ_Data/Family_Transformed/'
-
-# tr_file_save = save_path + 'Family_AZ_Train_Transformed.npz'
-# te_file_save = save_path + 'Family_AZ_Test_Transformed.npz'
-
-# tr_data = np.load(tr_file_save, allow_pickle=True)
-# te_data = np.load(te_file_save, allow_pickle=True)
-# X_train, Y_train, Y_tr_family = tr_data['X_train'], tr_data['Y_train'], tr_data['Y_tr_family']
-# X_test, Y_test, Y_te_family = te_data['X_test'], te_data['Y_test'], te_data['Y_te_family']
-
-
 def get_continual_az_class_data(data_dir, train=True):
     
     if train:
@@ -265,11 +254,7 @@ def get_malware_multitask_experiment(dataset_name, target_classes, init_classes,
 
 
     # If needed, update number of (total) classes in the config-dictionary
-    config['classes'] = 100 #classes_per_task if scenario=='domain' else classes_per_task*tasks
-
-    # Return tuple of train-, validation- and test-dataset, config-dictionary and number of classes per task
-    
-    #return (int(y_train.shape[0]), (train_datasets, test_datasets), config, classes_per_task)
+    config['classes'] = 100
     
     return (int(y_train.shape[0]), ember_train, ember_test, train_datasets, test_datasets, config, classes_per_task)
 
@@ -287,14 +272,3 @@ AVAILABLE_TRANSFORMS = {
 DATASET_CONFIGS = {
     'AZ': {'size': 49, 'channels': 1, 'classes': 100},
 }
-
-
-
-'''
-print('running data.py')
-(train_datasets, test_datasets), config, classes_per_task = get_malware_multitask_experiment(
-    'splitMNIST', 'drebin', 2492, 2500, scenario='class', tasks=9,
-    verbose=True, exception=True,
-)
-'''
-#print(test_datasets)

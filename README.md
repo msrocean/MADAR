@@ -88,6 +88,13 @@ Please note that, these datasets are collected as ``.apk`` files from AndroZoo r
 ### EMBER Class
 
 
+1. GRS experiments: run ``python main.py --metrics --scenario=class --replay_config=${REPLAY_CONFIG} --memory_budget=${MEMORY_BUDGET}``
+
+2. MADAR IFS experiments: run ``python main.py --metrics --scenario=class --replay_config=ifs --ifs_option=${IFS_OPTION} --memory_budget=${MEMORY_BUDGET}``
+
+3. MADAR AWS experiments: run ``python main.py --metrics --scenario=class --replay_config=aws --ifs_option=${IFS_OPTION} --memory_budget=${MEMORY_BUDGET}``
+
+
 ## AZ Experiments
 
 ### AZ Domain
@@ -98,9 +105,11 @@ Please note that, these datasets are collected as ``.apk`` files from AndroZoo r
 
 ### AZ Class
 
+1. GRS experiments: run ``python main.py --metrics --scenario=${SCENARIO} --replay_config=${REPLAY_CONFIG} --memory_budget=${MEMORY_BUDGET}``
 
+2. MADAR IFS experiments: run ``python main.py --metrics --scenario=class --replay_config=ifs --ifs_option=${IFS_OPTION} --memory_budget=${MEMORY_BUDGET}``
 
-
+3. MADAR AWS experiments: run ``python main.py --metrics --scenario=class --replay_config=aws --ifs_option=${IFS_OPTION} --memory_budget=${MEMORY_BUDGET}``
 
 
 __________________________
