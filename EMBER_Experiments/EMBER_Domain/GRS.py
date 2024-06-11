@@ -73,7 +73,8 @@ def get_family_labeled_task_test_data(data_dir, task_months, mlp_net=False):
         
 
     X_test, Y_test, Y_test_family = X_te, Y_te, Y_te_family
-    print(f'X_test {X_test.shape} Y_test {Y_test.shape} Y_te_family {Y_te_family.shape}')
+    
+    #print(f' X_test {X_test.shape} Y_test {Y_test.shape} Y_te_family {Y_test_family.shape}')
     
     return X_test, Y_test, Y_test_family
 
@@ -112,7 +113,7 @@ def get_GRS_data(data_dir, task_months, memory_budget, train=True, joint=True):
     
     if train:
         X_tr, Y_tr = get_month_data(data_dir, task_months[-1])
-        print(f'Current Task month {task_months[-1]} data X {X_tr.shape} Y {Y_tr.shape}')
+        #print(f'Current Task month {task_months[-1]} data X {X_tr.shape} Y {Y_tr.shape}')
         
         if len(task_months) != 1:
             previous_Xs, previous_Ys = [], []
@@ -148,44 +149,25 @@ def get_GRS_data(data_dir, task_months, memory_budget, train=True, joint=True):
         print(f'X_train {X_train.shape} Y_train {Y_train.shape}\n')
         return X_train, Y_train
     else:
-        #X_te, Y_te = get_month_data(data_dir, task_months[-1], train=False)
-        
-        X_te, Y_te = [], []
-        #for month in task_months[:-1]:
-        for month in task_months:
+        X_te, Y_te = get_month_data(data_dir, task_months[-1], train=False)
+        for month in task_months[:-1]:
             pre_X_te, pre_Y_te = get_month_data(data_dir, month, train=False)
             
-            X_te.append(np.array(pre_X_te)), Y_te.append(np.array(pre_Y_te))
-            #X_te, Y_te = np.concatenate((X_te, pre_X_te)), np.concatenate((Y_te, pre_Y_te))
+            X_te, Y_te = np.concatenate((X_te, pre_X_te)), np.concatenate((Y_te, pre_Y_te))
 
         X_test, Y_test  = X_te, Y_te
-        #print(f'X_test {X_test.shape} Y_test {Y_test.shape}')
+        print(f'X_test {X_test.shape} Y_test {Y_test.shape}')
         return X_test, Y_test
 
 
 
 
 
-
-                        
-def life_experience(model, X_test, Y_test, batch_size, device):
-    result_accs = []
-    
-    for T, Y in enumerate(Y_test):
-        accT, _, _, _ = testing_aucscore(model, X_test[T], Y, batch_size, device)
-        result_accs.append(accT)
-    
-    return np.array(result_accs)
-
-
-
-
 parser = argparse.ArgumentParser()
 parser.add_argument('--num_exps', type=int, default=1, required=False, help='Number of Experiments to Run.')
-parser.add_argument('--num_epoch', type=int, default=500, required=False)
+parser.add_argument('--num_epoch', type=int, default=100, required=False)
 parser.add_argument('--batch_size', type=int, default=6000, required=False)
 parser.add_argument('--grs_joint',  action="store_true", required=False)
-parser.add_argument('--grs_none',  action="store_true", required=False)
 parser.add_argument('--memory_budget', type=int, required=False)
 parser.add_argument('--data_dir', type=str,\
                     default='../../../month_based_processing_with_family_labels/', required=False)
@@ -207,9 +189,6 @@ patience = 5
 
 if args.grs_joint:
     memory_budget = 'joint'
-    
-if args.grs_none:
-    memory_budget = 'none'
     
     
 replay_type = 'joint_partial'
@@ -243,39 +222,31 @@ for exp in exp_seeds:
     
     standardization = StandardScaler()
     standard_scaler = None
-    
-    count_task = 0
-    model_init = 'yes'
-    results_acc = []
-    results_task = []
     for task_month in range(len(all_task_months)):
                 
         print(f'\n{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")} Round {cnt} ...')
         task_start = time.time()
-        current_task = [all_task_months[task_month]]
+        current_task = all_task_months[task_month]
         task_months = all_task_months[:task_month+1]
         print(f'Current Task {current_task} with Budget {memory_budget}')
 
 
-        model_save_dir = '../../GRS_SavedModel' + '/GRSModel_' + str(memory_budget) + '/' + str(current_task) + '/'
+        model_save_dir = '../GRS_SavedModel' + '/GRSModel_' + str(memory_budget) + '/' + str(current_task) + '/'
         create_parent_folder(model_save_dir)
         
-        opt_save_path = '../../GRS_SavedModel' + '/GRSOpt_' + str(memory_budget) + '/' + str(current_task) + '/'
+        opt_save_path = '../GRS_SavedModel' + '/GRSOpt_' + str(memory_budget) + '/' + str(current_task) + '/'
         create_parent_folder(opt_save_path)
         
-        results_save_dir =  '../../GRS_SavedResults_' +'/GRS_' + str(memory_budget) + '/' 
+        results_save_dir =  '../GRS_SavedResults_' +'/GRS_' + str(memory_budget) + '/' 
         create_parent_folder(results_save_dir)
         
         
         if args.grs_joint:
             X_train, Y_train = get_GRS_data(data_dir, task_months, memory_budget, train=True, joint=True)
-            X_test, Y_test = get_GRS_data(data_dir, all_task_months, memory_budget, train=False, joint=True)
-        elif args.grs_none:
-            X_train, Y_train = get_GRS_data(data_dir, current_task, memory_budget, train=True, joint=True)
-            X_test, Y_test = get_GRS_data(data_dir, all_task_months, memory_budget, train=False, joint=True)
+            X_test, Y_test = get_GRS_data(data_dir, task_months, memory_budget, train=False, joint=True)
         else:
             X_train, Y_train = get_GRS_data(data_dir, task_months, memory_budget, train=True, joint=False)
-            X_test, Y_test = get_GRS_data(data_dir, all_task_months, memory_budget, train=False, joint=False)
+            X_test, Y_test = get_GRS_data(data_dir, task_months, memory_budget, train=False, joint=False)
     
         
         # to debug
@@ -283,92 +254,72 @@ for exp in exp_seeds:
         #Y_train = Y_train [:500]
         #X_valid, Y_valid = X_valid[:500], Y_valid[:500]
         
-#         print(f'{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")} Standardizing ...')
+        print(f'{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")} Standardizing ...')
         
-#         if args.grs_joint:
-#                 standardization = StandardScaler()
-#                 standard_scaler = None
-#                 standard_scaler = standardization.fit(X_train)
-#         else:        
-#                 standard_scaler = standardization.partial_fit(X_train)
+        if args.grs_joint:
+                standardization = StandardScaler()
+                standard_scaler = None
+                standard_scaler = standardization.fit(X_train)
+        else:        
+                standard_scaler = standardization.partial_fit(X_train)
 
-#         X_train = standard_scaler.transform(X_train)
-#         #X_valid = standard_scaler.transform(X_valid)
-        
-#         for t, x_te in enumerate(X_test):
-#             X_test[t] = standard_scaler.transform(x_te)
-#             X_test[t], Y_test[t] = np.array(X_test[t], np.float32), np.array(Y_test[t], np.int32)  
+        X_train = standard_scaler.transform(X_train)
+        #X_valid = standard_scaler.transform(X_valid)
+        X_test = standard_scaler.transform(X_test)
 
 
-#         X_train, Y_train = np.array(X_train, np.float32), np.array(Y_train, np.int32)
+        X_train, Y_train = np.array(X_train, np.float32), np.array(Y_train, np.int32)
+        #X_valid, Y_valid = np.array(X_valid, np.float32), np.array(Y_valid, np.int32)
+        X_test, Y_test = np.array(X_test, np.float32), np.array(Y_test, np.int32)        
         
-              
-        
-#         print(f'{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")} Training ...')
-        
-        
-#         if count_task == 0 and model_init == 'yes':
-#             accs_task = life_experience(model, X_test, Y_test, batch_size, device)
-#             model_init = 'no'
-#             results_task.append(count_task)
-#             results_acc.append(accs_task)
-        
-#         X_valid, Y_valid = X_test[count_task], Y_test[count_task]
-        
-#         task_training_time, epoch_ran, training_loss, validation_loss  = training_early_stopping(\
-#                              model, model_save_dir, opt_save_path, X_train, Y_train,\
-#                              X_valid, Y_valid, patience, batch_size, device, optimizer, num_epoch,\
-#                              criterion, replay_type, current_task, exp, earlystopping=True)
-        
-        
-#         #model = Ember_MLP_Net()
-#         #model = model.to(device)
-#         #load the best model for this task
-#         best_model_path = model_save_dir + os.listdir(model_save_dir)[0]
-#         print(f'loading best model {best_model_path}')
-#         model.load_state_dict(torch.load(best_model_path))
-        
-        
-#         #optimizer = torch.optim.SGD(model.parameters(), lr=0.001, momentum=0.9, weight_decay=0.000001)
-#         best_optimizer = opt_save_path + os.listdir(opt_save_path)[0]
-#         print(f'loading best optimizer {best_optimizer}')
-#         optimizer.load_state_dict(torch.load(best_optimizer))
+        print(f'{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")} Training ...')
         
         
         
-#         #acc, precision, recall, f1score = testing_aucscore(model, X_test, Y_test, batch_size, device)
-        
-#         if (count_task == 0 and model_init != 'yes') or count_task != 0:
-#             accs_task = life_experience(model, X_test, Y_test, batch_size, device)
-#             results_task.append(count_task)
-#             results_acc.append(accs_task)
-#             count_task += 1
-        
-#         #print(f'\n\ncount Task {count_task}\n\n results_acc {results_acc}\n\n')
-#         end_time = time.time()
+        task_training_time, epoch_ran, training_loss, validation_loss  = training_early_stopping(\
+                             model, model_save_dir, opt_save_path, X_train, Y_train,\
+                             X_test, Y_test, patience, batch_size, device, optimizer, num_epoch,\
+                             criterion, replay_type, current_task, exp, earlystopping=True)
 
-#         print(f'Elapsed time {(end_time - start_time)/60} mins.')    
+        
+        #model = Ember_MLP_Net()
+        #model = model.to(device)
+        best_model_path = model_save_dir + os.listdir(model_save_dir)[0]
+        print(f'loading best model {best_model_path}')
+        model.load_state_dict(torch.load(best_model_path))
+        
+        #optimizer = torch.optim.SGD(model.parameters(), lr=0.001, momentum=0.9, weight_decay=0.000001)
+        best_optimizer = opt_save_path + os.listdir(opt_save_path)[0]
+        print(f'loading best optimizer {best_optimizer}')
+        optimizer.load_state_dict(torch.load(best_optimizer))
+        
+        
+        
+        
+        acc, precision, recall, f1score = testing_aucscore(model, X_test, Y_test, batch_size, device)
+        
+
+        end_time = time.time()
+
+        print(f'Elapsed time {(end_time - start_time)/60} mins.')    
 
 
-#         task_end = time.time()
-#         task_run_time = (task_end - task_start)/60
+        task_end = time.time()
+        task_run_time = (task_end - task_start)/60
         
-        
+
        
-# #         results_f = open(os.path.join('./Submission_Domain/' + 'grs_' + str(memory_budget) + '_results.txt'), 'a')
-# #         result_string = '{}\t{}\t{}\t{}\t{}\t\n'.format(current_task, acc, precision, recall, f1score)
+        results_f = open(os.path.join('./Results_Domain/' + 'grs_' + str(memory_budget) + '_results.txt'), 'a')
+        result_string = '{}\t{}\t{}\t{}\t{}\t\n'.format(current_task, acc, precision, recall, f1score)
         
-# #         results_f.write(result_string)
-# #         results_f.flush()
-# #         results_f.close()
+        results_f.write(result_string)
+        results_f.flush()
+        results_f.close()
 
-#     print(f'\nresults_task\t{results_task}\nresults_acc\t{results_acc}\n')
+    end_time = time.time()
+    cnt += 1
+    print(f'Elapsed time {(end_time - start_time)/60} mins.')
     
-#     save_results_file = './Submission_Domain/' 'grs_' + str(memory_budget) + '_results.npz'
-#     np.savez(save_results_file, task_accs=results_acc, num_task=results_task)
-                        
-#     end_time = time.time()
-#     cnt += 1
-#     print(f'Elapsed time {(end_time - start_time)/60} mins.')
-
-
+    del model_save_dir
+    del opt_save_path
+    del results_save_dir
