@@ -82,7 +82,7 @@ Please note that, these datasets are collected as ``.apk`` files from AndroZoo r
 
 
 <div style="text-align: center;">
-    <img src="repo_imgs/EMBER_Results.png" alt="EMBER Results"  width="300" height="200" />
+    <img src="repo_imgs/EMBER_Results.png" alt="EMBER Results"  width="600" height="300" />
 </div>
 
 
@@ -116,7 +116,7 @@ Please note that, these datasets are collected as ``.apk`` files from AndroZoo r
 
 
 <div style="text-align: center;">
-    <img src="repo_imgs/AZ_Results.png" alt="EMBER Results"  width="300" height="200" />
+    <img src="repo_imgs/AZ_Results.png" alt="EMBER Results"  width="600" height="300" />
 </div>
 
 
