@@ -79,6 +79,13 @@ Please note that, these datasets are collected as ``.apk`` files from AndroZoo r
 
 ## EMBER Experiments
 
+
+
+<div style="text-align: center;">
+    <img src="repo_imgs/EMBER_Results.png" alt="EMBER Results"  width="300" height="200" />
+</div>
+
+
 ### EMBER Domain
 
 1. GRS experiments: run ``python GRS.py --memory_budget=${MEMORY_BUDGET}``
@@ -106,6 +113,12 @@ Please note that, these datasets are collected as ``.apk`` files from AndroZoo r
 
 
 ## AZ Experiments
+
+
+<div style="text-align: center;">
+    <img src="repo_imgs/AZ_Results.png" alt="EMBER Results"  width="300" height="200" />
+</div>
+
 
 ### AZ Domain
 
