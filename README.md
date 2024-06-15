@@ -55,7 +55,7 @@ Please note that, these datasets are collected as ``.apk`` files from AndroZoo r
 ## Replay-based Continual Learning
 
 <div style="text-align: center;">
-    <img src="repo_imgs/MADAR_Replay_CL.png" alt="Replay in Continual Learning"  width="300" height="200"/>
+    <img src="repo_imgs/MADAR_Replay_CL.png" alt="Replay in Continual Learning"  width="600" height="400"/>
 </div>
 
 
@@ -72,7 +72,7 @@ Please note that, these datasets are collected as ``.apk`` files from AndroZoo r
 ## Anomalous Weights-based Sampling (AWS)
 
 <div style="text-align: center;">
-    <img src="repo_imgs/MADAR_AWS.png" alt="Replay in Continual Learning"  width="300" height="200" />
+    <img src="repo_imgs/MADAR_AWS.png" alt="Replay in Continual Learning"  width="600" height="400" />
 </div>
 
 
