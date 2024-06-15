@@ -64,7 +64,7 @@ Please note that, these datasets are collected as ``.apk`` files from AndroZoo r
 
 
 <div style="text-align: center;">
-    <img src="repo_imgs/MADAR_IFS.png" alt="Replay in Continual Learning"  width="300" height="200" />
+    <img src="repo_imgs/MADAR_IFS.png" alt="Replay in Continual Learning"  width="600" height="400" />
 </div>
 
 
