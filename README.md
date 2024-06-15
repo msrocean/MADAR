@@ -82,7 +82,7 @@ Please note that, these datasets are collected as ``.apk`` files from AndroZoo r
 
 
 <div style="text-align: center;">
-    <img src="repo_imgs/EMBER_Results.png" alt="EMBER Results"  width="800" height="500" />
+    <img src="repo_imgs/EMBER_Results.png" alt="EMBER Results"  width="700" height="500" />
 </div>
 
 
